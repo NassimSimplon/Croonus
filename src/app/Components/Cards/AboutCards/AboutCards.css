@@ -279,11 +279,8 @@
         display: none;
     }
     .about-card_3,
-    .about-card_1,
-    .about-card_2,
-    .about-card_4,
-    .about-card_5{
-        padding              : 25px 20px !important;    
+    .about-card_2{
+        padding              : 25px 20px ;    
     }
     .about-card_6 {
         grid-row             : 17 / 20;
