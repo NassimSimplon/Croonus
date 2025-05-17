@@ -1,0 +1,96 @@
+.service_card {
+    width                : 100%;
+    max-width            : 490px;
+    height               : 100%;
+    border-radius        : 19px;
+    -webkit-border-radius: 19px;
+    -moz-border-radius   : 19px;
+    -ms-border-radius    : 19px;
+    -o-border-radius     : 19px;
+    padding              : 43px 40px;
+    overflow             : hidden;
+    position             : relative;
+    transition           : all 0.5s ease;
+    z-index              : 0;
+}
+
+.service_card::before {
+    content : "";
+    position: absolute;
+    top     : -50%;
+    left    : -50%;
+    width   : 200%;
+    height  : 200%;
+    background: linear-gradient(0deg,
+            transparent,
+            transparent 30%,
+            rgba(255, 255, 255, 0.3));
+    transform : rotate(-45deg);
+    transition: all 0.5s ease;
+    opacity   : 0;
+    z-index   : 1;
+}
+
+.service_card:hover {
+    transform : scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+}
+
+.service_card:hover::before {
+    opacity  : 1;
+    transform: rotate(-45deg) translateY(100%);
+}
+
+.service-card__title {
+    font-size  : calc(var(--title-size) - 15px);
+    color      : var(--primary-white);
+    font-weight: 900;
+}
+
+.service-card__title span {
+    color      : var(--primary-green);
+    font-size  : var(--title-size);
+    font-weight: 900;
+}
+
+.service-card__description {
+    font-size  : var(--sub-title-size);
+    color      : var(--primary-white);
+    margin-top : 30px;
+    font-weight: 400;
+}
+
+.service-card_1 {
+    background-color: var(--primary-purple);
+}
+
+.service-card_2 {
+    background-color: var(--secondary-green);
+}
+
+.service-card_3 {
+    background-color: var(--primary-pink);
+}
+
+.service-card_4 {
+    background-color: var(--third-green);
+}
+
+.service-card_5 {
+    background-color: var(--primary-yellow);
+}
+
+.service-card_6 {
+    background-color: var(--secondary-blue);
+}
+
+.service-card_5 .service-card__title,
+.service-card_5 .service-card__description {
+    color: var(--primary-black);
+}
+
+@media (min-width: 220px) and (max-width: 768px) {
+    .service_card {
+        max-width: 100%;
+    }
+}

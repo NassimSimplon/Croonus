@@ -1,0 +1,93 @@
+.about-section {
+    width : 100%;
+    height: fit-content;
+}
+
+.about-section__title {
+    width      : 100%;
+    text-align : center;
+    font-size  : var(--title-size);
+    font-weight: 900;
+    color      : var(--primary-white);
+}
+
+.about-section__title span {
+    color      : var(--primary-green);
+    font-size  : var(--title-size);
+    font-weight: 900;
+}
+
+.about-section__description,
+.about-section_second_description {
+    text-align    : center;
+    font-size     : var(--sub-title-size);
+    color         : var(--primary-white);
+    width         : 100%;
+    max-width     : 1082px;
+    margin        : auto;
+    padding-inline: 30px;
+}
+
+.about-section__description {
+    margin-top: 60px;
+}
+
+.about-section_second_description {
+    margin-top: 25px;
+}
+
+.about-section_second_description .white,
+.about-section__description .white {
+    font-weight: 900;
+    font-size  : var(--sub-title-size);
+}
+
+.about-section__description .green {
+    color      : var(--primary-green);
+    font-weight: 900;
+    font-size  : var(--sub-title-size);
+}
+
+.about-section_second_description .bleu {
+    color      : var(--primary-blue);
+    font-weight: 900;
+    font-size  : var(--sub-title-size);
+}
+
+.about-cards-container {
+    width                : 100%;
+    max-width            : 1500px;
+    height               : calc(79px * 13);
+    max-height           : fit-content;
+    display              : grid;
+    grid-template-columns: repeat(9, 1fr);
+    grid-template-rows   : repeat(7, 1fr);
+    margin               : 50px auto;
+    gap                  : 20px;
+    padding-inline       : 30px;
+}
+
+@media (min-width: 1024px) and (max-width: 1320px) {
+    .about-cards-container {
+        height            : fit-content;
+        grid-template-rows: repeat(14, 79px);
+    }
+}
+
+@media (min-width: 220px) and (max-width: 1024px) {
+    .about-cards-container {
+        height            : fit-content;
+        grid-template-rows: repeat(20, 79px);
+    }
+}
+
+@media (min-width: 220px) and (max-width: 520px) {
+    .about-cards-container {
+        height            : fit-content;
+        grid-template-rows: repeat(21, 100px) !important;
+    }
+
+    .about-section__title {
+        font-size: calc(var(--title-size) - 10px);
+    }
+}

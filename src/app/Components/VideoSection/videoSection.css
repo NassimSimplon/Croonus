@@ -1,0 +1,222 @@
+.video-container {
+    width     : 100%;
+    height    : 100vh;
+    max-height: 900px;
+    position  : relative;
+    overflow  : hidden;
+    z-index   : 0;
+}
+
+.video-container::before {
+    content          : "";
+    width            : 120%;
+    height           : 45%;
+    position         : absolute;
+    bottom           : -120px;
+    left             : -20px;
+    background-color : var(--primary-bg);
+    transform        : rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+    -moz-transform   : rotate(-4deg);
+    -ms-transform    : rotate(-4deg);
+    -o-transform     : rotate(-4deg);
+    z-index          : 3;
+}
+
+.VideoSection {
+    position       : relative;
+    width          : 100%;
+    height         : 100%;
+    overflow       : hidden;
+    display        : flex;
+    justify-content: center;
+    align-items    : center;
+    text-align     : center;
+    color          : white;
+}
+
+.video-background {
+    position: absolute;
+    top     : 0;
+    left    : 0;
+    width   : 100%;
+    height  : 100%;
+    z-index : -1;
+    overflow: hidden;
+}
+
+.video-background video {
+    position        : absolute;
+    top             : 50%;
+    left            : 50%;
+    transform       : translate(-50%, -50%) scale(1);
+    transform-origin: center;
+    min-width       : 100%;
+    min-height      : 100%;
+    width           : auto;
+    height          : auto;
+    object-fit      : contain;
+    z-index         : -1;
+}
+
+.message-section {
+    width   : fit-content;
+    height  : fit-content;
+    position: absolute;
+
+    bottom               : 150px;
+    left                 : 200px;
+    right                : 200px;
+    background-color     : rgba(255, 255, 255, 0.961);
+    padding              : 50px 60px;
+    border-radius        : 12px;
+    -webkit-border-radius: 12px;
+    -moz-border-radius   : 12px;
+    -ms-border-radius    : 12px;
+    -o-border-radius     : 12px;
+    z-index              : 4;
+    box-shadow           : 0px 4px 9px 0px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow   : 0px 4px 9px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow      : 0px 4px 9px 0px rgba(0, 0, 0, 0.75);
+}
+
+.message-section .title {
+    font-size    : var(--title-size);
+    font-weight  : 900;
+    color        : var(--primary-black);
+    padding-right: 120px;
+}
+
+.message-section .title span {
+    color    : var(--primary-green);
+    font-size: var(--title-size);
+}
+
+.message-section .description {
+    font-size  : var(--sub-title-size);
+    font-weight: 500;
+    color      : var(--primary-black);
+    margin-top : 10px;
+}
+
+.message-section .btn-section {
+    width         : 100%;
+    height        : fit-content;
+    display       : flex;
+    flex-direction: row;
+    align-items   : center;
+    gap           : 10px;
+    margin-top    : 30px;
+}
+
+.message-section .btn-section .first-btn,
+.message-section .btn-section .second-btn {
+    width                : 100%;
+    height               : 40px;
+    padding              : 10px 20px;
+    border-radius        : 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius   : 4px;
+    -ms-border-radius    : 4px;
+    -o-border-radius     : 4px;
+    color                : var(--primary-white);
+    font-size            : var(--btns-font-size);
+    font-weight          : 400;
+    transition           : all 0.2s ease-in-out;
+    -webkit-transition   : all 0.2s ease-in-out;
+    -moz-transition      : all 0.2s ease-in-out;
+    -ms-transition       : all 0.2s ease-in-out;
+    -o-transition        : all 0.2s ease-in-out;
+}
+
+.message-section .btn-section .first-btn {
+    background-color: var(--primary-green);
+}
+
+.message-section .btn-section .second-btn {
+    background-color: var(--primary-bg);
+    display         : flex;
+
+    flex-direction : row;
+    align-items    : center;
+    justify-content: center;
+    gap            : 7px;
+}
+
+.message-section .btn-section .first-btn:hover,
+.message-section .btn-section .second-btn:hover {
+    transform         : translateY(-7px);
+    -webkit-transform : translateY(-7px);
+    -moz-transform    : translateY(-7px);
+    -ms-transform     : translateY(-7px);
+    -o-transform      : translateY(-7px);
+    box-shadow        : 0px 4px 9px 0px rgba(0, 0, 0, 0.443);
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.443);
+    -moz-box-shadow   : 0px 4px 9px 0px rgba(0, 0, 0, 0.443);
+    color             : var(--primary-black);
+    background-color  : var(--primary-white);
+}
+
+.message-section .btn-section .second-btn:hover .menu-icon {
+    fill  : var(--primary-black);
+    stroke: var(--primary-black);
+}
+
+/* Media Query */
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    .message-section {
+        left: 100px;
+    }
+}
+
+@media (min-width: 599px) and (max-width: 1024px) {
+    .video-container {
+        height    : 80vh;
+        max-height: 600px;
+    }
+
+    .message-section {
+        left  : 20px;
+        right : 20px;
+        bottom: 50px;
+    }
+}
+
+@media (min-width: 280px) and (max-width: 598px) {
+    .video-container {
+        height: 70vh;
+    }
+
+    .message-section {
+        width            : calc(100% - 40px);
+        left             : 50%;
+        bottom           : -60px;
+        transform        : translate(50%, -50%);
+        padding          : 30px 40px;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform   : translate(50%, -50%);
+        -ms-transform    : translate(50%, -50%);
+        -o-transform     : translate(50%, -50%);
+    }
+
+    .message-section .btn-section {
+        width         : 100%;
+        flex-direction: column;
+    }
+
+    .message-section .title {
+        padding-right: 0;
+        font-size    : var(--responsive-title-size);
+    }
+
+    .message-section .description {
+        font-size: var(--responsive-sub-title-size);
+    }
+}
+
+@media (min-height: 500px) and (max-width: 598px) {
+    .message-section {
+        top: 56%;
+    }
+}

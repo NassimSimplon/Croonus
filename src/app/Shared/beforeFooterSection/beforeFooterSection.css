@@ -1,0 +1,91 @@
+.beforeFooterSection {
+    width    : 100%;
+    max-width: 1500px;
+    margin   : 200px auto 0 auto;
+    padding  : 0 30px;
+}
+
+.beforeFooterSection__title {
+    font-size  : var(--title-size);
+    font-weight: 900;
+    color      : var(--primary-white);
+    text-align : center;
+}
+
+.beforeFooterSection__title span {
+    color      : var(--primary-green);
+    font-weight: 900;
+    font-size  : var(--title-size);
+}
+
+.beforeFooterSection_btns {
+    width          : 100%;
+    height         : fit-content;
+    display        : flex;
+    flex-direction : row;
+    align-items    : center;
+    justify-content: center;
+    gap            : 25px;
+    margin-top     : 50px;
+}
+
+.beforeFooterSection_first_btn,
+.beforeFooterSection_second_btn {
+    width             : 100%;
+    max-width         : 300px;
+    padding-block     : 13px;
+    font-size         : var(--btns-font-size);
+    border-radius     : 8px;
+    color             : var(--primary-white);
+    transition        : all 0.2s ease-in-out;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition   : all 0.2s ease-in-out;
+    -ms-transition    : all 0.2s ease-in-out;
+    -o-transition     : all 0.2s ease-in-out;
+}
+
+.beforeFooterSection_first_btn {
+    background-color: var(--primary-green);
+}
+
+.beforeFooterSection_second_btn {
+    background-color: var(--primary-blue);
+}
+
+.beforeFooterSection_first_btn:hover,
+.beforeFooterSection_second_btn:hover {
+    transform         : translateY(-7px);
+    -webkit-transform : translateY(-7px);
+    -moz-transform    : translateY(-7px);
+    -ms-transform     : translateY(-7px);
+    -o-transform      : translateY(-7px);
+    box-shadow        : 0px 4px 9px 0px rgba(0, 0, 0, 0.443);
+    -webkit-box-shadow: 0px 4px 9px 0px rgba(0, 0, 0, 0.443);
+    -moz-box-shadow   : 0px 4px 9px 0px rgba(0, 0, 0, 0.443);
+    color             : var(--primary-black);
+    background-color  : var(--primary-white);
+}
+
+@media (min-width: 480px) and (max-width: 786px) {
+    .beforeFooterSection {
+        margin: 100px auto 0 auto;
+    }
+
+    .beforeFooterSection__title {
+        font-size: calc(var(--title-size) - 10px);
+    }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+    .beforeFooterSection {
+        margin: 50px auto 0 auto;
+    }
+
+    .beforeFooterSection__title {
+        font-size: calc(var(--title-size) - 10px);
+    }
+
+    .beforeFooterSection_btns {
+        flex-direction: column;
+    }
+}

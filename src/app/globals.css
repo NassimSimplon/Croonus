@@ -1,0 +1,97 @@
+:root {
+  --primary-bg               : #0c1b20;
+  /* green */
+  --primary-green            : #43b74a;
+  --secondary-green          : #0f7e78;
+  --third-green              : #588157;
+  /* blue */
+  --primary-blue             : #3d76bb;
+  --secondary-blue           : #2a4361;
+  /* colors */
+  --primary-purple           : #535aa8;
+  --primary-pink             : #ee5c5d;
+  --primary-yellow           : #efcb1b;
+  --primary-black            : #0e1d21;
+  --primary-white            : #fefefe;
+  /* font-sizes */
+  --xl-font-size             : 50px;
+  --title-size               : 40px;
+  --responsive-title-size    : 30px;
+  --sub-title-size           : 17px;
+  --responsive-sub-title-size: 14px;
+  --btns-font-size           : 16px;
+  /*  */
+  --border-color             : #414c50;
+}
+
+* {
+  box-sizing     : border-box;
+  font-family    : "Montserrat", sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin          : 0;
+  font-family     : inherit;
+  background-color: var(--primary-bg);
+  position        : relative;
+  height          : fit-content;
+}
+
+main {
+  overflow: hidden;
+}
+
+a {
+  text-decoration: none;
+  cursor         : pointer;
+}
+
+button {
+  cursor : pointer;
+  border : none;
+  outline: none;
+}
+
+img {
+  aspect-ratio: 2 / 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin : 0;
+  padding: 0;
+}
+
+picture {
+  width: fit-content !important;
+}
+
+/* Scroll Bar */
+
+*::-webkit-scrollbar {
+  width           : 8px;
+  background-color: var(--secondary-blue);
+}
+
+*::-webkit-scrollbar-thumb {
+  width: 8px;
+
+  background-color: var(--primary-green);
+  border-radius   : 8px;
+}
+
+*::-webkit-scrollbar-corner {
+  border-radius: 8px;
+}
+
+.footer-logo {
+  position: absolute;
+  right   : 0;
+  bottom  : 35px;
+  z-index : -1;
+}
