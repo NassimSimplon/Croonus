@@ -18,6 +18,7 @@ const VideoPlayer = ({
       muted={muted}
       playsInline={playsInline}
       className={className}
+       preload="auto"
     >
       <source src={src} type={type} />
     </video>
