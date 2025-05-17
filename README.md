@@ -17,7 +17,6 @@
 ```
    └── 📁public
         └── File.svg
-        └── home.png
         └── 📁images
             └── image.image
         └── 📁videos
