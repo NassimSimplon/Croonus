@@ -4,7 +4,6 @@ import Link from "next/link";
 import React from "react";
 
 function Footer() {
-  console.log("Rendering Footer 1")
   return (
     <footer className="app-footer">
       <div className="app-footer_wrapper">

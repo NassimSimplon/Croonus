@@ -3,6 +3,7 @@ import "./TestimonialSection.css";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import TestimonialCard from "../Cards/TestimonialCard";
+import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 
 const testimonialList = [
     {
@@ -17,7 +18,7 @@ const testimonialList = [
     `,
         name: "Vera Vuković",
         position: "Direktor marketinga",
-           type:"png"
+        type: "png",
     },
     {
         id: 2,
@@ -31,7 +32,7 @@ const testimonialList = [
     `,
         name: "Tamara Karapandžić",
         position: "Marketing i PR Menadžer",
-          type:"png"
+        type: "png",
     },
     {
         id: 3,
@@ -45,7 +46,7 @@ const testimonialList = [
     `,
         name: "Tamara Karapandžić",
         position: "Marketing i PR Menadžer",
-          type:"png"
+        type: "png",
     },
     {
         id: 4,
@@ -59,7 +60,7 @@ const testimonialList = [
     `,
         name: "Vera Vuković",
         position: "Direktor marketinga",
-          type:"png"
+        type: "png",
     },
     {
         id: 5,
@@ -73,7 +74,7 @@ const testimonialList = [
     `,
         name: "Tamara Karapandžić",
         position: "Marketing i PR Menadžer",
-          type:"png"
+        type: "png",
     },
     {
         id: 6,
@@ -87,7 +88,7 @@ const testimonialList = [
     `,
         name: "Vera Vuković",
         position: "Direktor marketinga",
-          type:"png"
+        type: "png",
     },
 
     {
@@ -102,7 +103,7 @@ const testimonialList = [
     `,
         name: "Tamara Karapandžić",
         position: "Marketing i PR Menadžer",
-          type:"png"
+        type: "png",
     },
     {
         id: 8,
@@ -116,7 +117,7 @@ const testimonialList = [
     `,
         name: "Vera Vuković",
         position: "Direktor marketinga",
-          type:"png"
+        type: "png",
     },
 ];
 
@@ -129,6 +130,7 @@ const TestimonialSection = () => {
     const [fadeState, setFadeState] = useState("fade-in");
     const [direction, setDirection] = useState("forward");
     const [itemsPerPage, setItemsPerPage] = useState(2);
+    const { setRef, isInView } = useMultiScrollReveal(0.9);
 
     // Handle responsiveness
     useEffect(() => {
@@ -181,7 +183,14 @@ const TestimonialSection = () => {
 
     return (
         <section className="testimonialSection">
-            <h1 className="testimonialSection__title">
+            <h1
+                className={`testimonialSection__title ${isInView("testimonialSection__title")
+                    ? "responsive-typewriter"
+                    : "hidden-element"
+                    }`}
+                ref={setRef("testimonialSection__title")}
+                data-scroll-id="testimonialSection__title"
+            >
                 Kažu o nama<span>.</span>
             </h1>
 

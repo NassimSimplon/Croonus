@@ -70,20 +70,21 @@
 @media (min-width: 1024px) and (max-width: 1320px) {
     .about-cards-container {
         height            : fit-content;
-        grid-template-rows: repeat(14, 79px);
+        grid-template-rows: repeat(14, 79px);   
     }
 }
 
 @media (min-width: 220px) and (max-width: 1024px) {
     .about-cards-container {
-        height            : fit-content;
+        height            : 100%;
+        min-height: 100vh;
         grid-template-rows: repeat(20, 79px);
     }
 }
 
 @media (min-width: 220px) and (max-width: 520px) {
     .about-cards-container {
-        height            : fit-content;
+        height            : 100%;
         grid-template-rows: repeat(21, 100px) !important;
     }
 

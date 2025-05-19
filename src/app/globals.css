@@ -95,3 +95,73 @@ picture {
   bottom  : 35px;
   z-index : -1;
 }
+
+.default-typewriter {
+  overflow         : hidden;
+  max-width        : 100%;
+  visibility       : visible;
+  animation        : defaultTypewriter 1s ease forwards 0.1s;
+  -webkit-animation: defaultTypewriter 1s ease forwards 0.1s;
+}
+
+@keyframes defaultTypewriter {
+  0% {
+    clip-path: inset(0 100% 0 0);
+  }
+
+  100% {
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.responsive-typewriter {
+  overflow         : hidden;
+  max-width        : 100%;
+  visibility       : visible;
+  clip-path        : inset(0 100% 0 0);
+  animation        : revealClip 1.1s ease forwards 0.2s;
+  -webkit-animation: revealClip 1.1s ease forwards 0.2s;
+}
+
+@keyframes revealClip {
+  from {
+    opacity  : 0;
+    clip-path: inset(0 100% 0 0);
+  }
+
+  to {
+    opacity  : 1;
+    clip-path: inset(0 0 0 0);
+  }
+}
+
+.hidden-element {
+  opacity: 0;
+}
+
+.fade-up-element {
+  width            : 100%;
+  height           : 100%;
+  animation        : fadeUpElement 1.3s ease;
+  -webkit-animation: fadeUpElement 1.3s ease;
+}
+
+@keyframes fadeUpElement {
+  from {
+    opacity          : 0;
+    transform        : translateY(20px);
+    -webkit-transform: translateY(20px);
+    -moz-transform   : translateY(20px);
+    -ms-transform    : translateY(20px);
+    -o-transform     : translateY(20px);
+  }
+
+  to {
+    opacity          : 1;
+    transform        : translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform   : translateY(0);
+    -ms-transform    : translateY(0);
+    -o-transform     : translateY(0);
+  }
+}

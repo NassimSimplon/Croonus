@@ -3,6 +3,7 @@ import "./ProjectSection.css";
 import Link from "next/link";
 import React from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
+import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 import { useHorizontalScroll } from "@/app/CustomHooks/useHorizontalScroll";
 
 const projectList = [
@@ -59,10 +60,19 @@ const projectList = [
 const ProjectSection = () => {
   const { containerRef, canScrollLeft, canScrollRight, scroll } =
     useHorizontalScroll(316);
+  const { setRef, isInView } = useMultiScrollReveal(0.9);
 
   return (
     <section className="project-section">
-      <h1 className="project-section_title">
+      <h1
+        className={`project-section_title ${
+          isInView("project-section_title")
+            ? "responsive-typewriter"
+            : "hidden-element"
+        }`}
+        ref={setRef("project-section_title")}
+        data-scroll-id="project-section_title"
+      >
         Naši projekti<span>.</span>
       </h1>
 
@@ -86,7 +96,16 @@ const ProjectSection = () => {
         <div className="scroll-container" ref={containerRef}>
           <div className="scroll-content">
             {projectList.map(({ id, src, alt, title, link, type }) => (
-              <div key={id} className="scroll-item">
+              <div
+                key={id}
+                className={`scroll-item ${
+                  isInView(`scroll-item_${id}`)
+                    ? "fade-up-element"
+                    : "hidden-element"
+                }`}
+                ref={setRef(`scroll-item_${id}`)}
+                data-scroll-id={`scroll-item_${id}`}
+              >
                 <ResponsiveImage
                   width="100"
                   height="100"
@@ -132,7 +151,17 @@ const ProjectSection = () => {
           />
         </button>
       </div>
-      <p className="project-section-footer">Pogledajte sve projekte</p>
+      <p
+        className={`project-section-footer ${
+          isInView("project-section-footer")
+            ? "responsive-typewriter"
+            : "hidden-element"
+        }`}
+        ref={setRef("project-section-footer")}
+        data-scroll-id="project-section-footer"
+      >
+        Pogledajte sve projekte
+      </p>
     </section>
   );
 };

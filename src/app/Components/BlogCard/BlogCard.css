@@ -61,3 +61,24 @@
 .blog_card_more_icon:hover {
     fill: var(--primary-green);
 }
+.blog_page_video  .video-background {
+    animation: blogScaleVideo 1.2s ease ;
+    -webkit-animation: blogScaleVideo 1.2s ease ;
+}
+    @keyframes blogScaleVideo {
+        from {
+         transform: scale(1.7);
+         -webkit-transform: scale(1.7);
+         -moz-transform: scale(1.7);
+         -ms-transform: scale(1.7);
+         -o-transform: scale(1.7);
+}
+    
+        to {
+            transform: scale(1);
+            -webkit-transform: scale(1);
+            -moz-transform: scale(1);
+            -ms-transform: scale(1);
+            -o-transform: scale(1);
+    }
+    }

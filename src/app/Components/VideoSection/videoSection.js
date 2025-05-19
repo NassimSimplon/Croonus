@@ -21,10 +21,10 @@ const VideoSection = ({ openElement }) => {
                 </div>
             </div>
             <div className="message-section">
-                <h1 className="title">
+                <h1 className="title default-typewriter">
                     Pronašli ste nas<span>.</span>
                 </h1>
-                <p className="description">
+                <p className="description default-typewriter">
                     Sada pomozimo kupcima
                     <br />
                     da pronađu vaše proizvode.
