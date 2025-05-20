@@ -14,14 +14,7 @@
     -o-transition:all .3s ease ;
     
 }
-.about_card:hover {
-    transform: scale(1.04);
-    -webkit-transform: scale(1.04);
-    -moz-transform: scale(1.04);
-    -ms-transform: scale(1.04);
-    -o-transform: scale(1.04);
-}
-
+ 
 .about-card__image-wrapper {
     width        : 100%;
     height       : 100%;

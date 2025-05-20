@@ -28,8 +28,8 @@ const Navbar = () => {
           className="logo"
           src="/menu-croonus-logo-white.svg"
           alt="Logo"
-          width={273}
-          height={47}
+          width={300}
+          height={100}
           priority
         />
         <div className="menu">
@@ -43,8 +43,8 @@ const Navbar = () => {
               className="menu-icon"
               src="/menu.svg"
               alt="Menu Icon"
-              width={30}
-              height={30}
+              width={50}
+              height={50}
               priority
             />
           </button>

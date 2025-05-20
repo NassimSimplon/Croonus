@@ -26,6 +26,7 @@
     max-width     : 1082px;
     margin        : auto;
     padding-inline: 30px;
+    font-weight: 300;
 }
 
 .about-section__description {
@@ -38,19 +39,19 @@
 
 .about-section_second_description .white,
 .about-section__description .white {
-    font-weight: 900;
+    font-weight: 700;
     font-size  : var(--sub-title-size);
 }
 
 .about-section__description .green {
     color      : var(--primary-green);
-    font-weight: 900;
+    font-weight: 700;
     font-size  : var(--sub-title-size);
 }
 
 .about-section_second_description .bleu {
     color      : var(--primary-blue);
-    font-weight: 900;
+    font-weight: 700;
     font-size  : var(--sub-title-size);
 }
 

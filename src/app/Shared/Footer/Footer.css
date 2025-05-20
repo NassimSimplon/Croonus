@@ -34,7 +34,7 @@
 .app-footer_other {
   font-size  : var(--sub-title-size);
   color      : var(--primary-white);
-  font-weight: 400;
+  font-weight: 300;
 }
 
 .app_footer_services {
@@ -52,6 +52,9 @@
   color      : var(--primary-black);
   font-size  : var(--responsive-sub-title-size);
   font-weight: 400;
+}
+.app_footer_services_txt:hover {
+   text-decoration: underline;
 }
 
 .app_footer_services_txt span {

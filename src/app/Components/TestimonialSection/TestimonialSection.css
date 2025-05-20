@@ -9,7 +9,7 @@
   font-size    : var(--title-size);
   font-weight  : 900;
   color        : var(--primary-white);
-  margin-bottom: 2rem;
+  margin-bottom: 5rem;
 }
 
 .testimonialSection__title span {
@@ -51,17 +51,7 @@
   height     : 100%;
 }
 
-.fade-in {
-  transform     : translateX(0);
-  opacity       : 1;
-  pointer-events: all;
-}
-
-.fade-out {
-  transform     : translateX(-30px);
-  opacity       : 0;
-  pointer-events: none;
-}
+ 
 
 .left-arrow {
   transform        : rotate(180deg);

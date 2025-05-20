@@ -10,7 +10,7 @@ const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
     <div
       className={`testimonial-card ${
         isInView(`testimonial-card_${id}`)
-          ? "fade-up-element"
+          ? "opacity"
           : "hidden-element"
       }`}
       ref={setRef(`testimonial-card_${id}`)}

@@ -26,7 +26,7 @@
     display              : grid;
     grid-template-columns: repeat(5, 1fr);
     gap                  : 25px;
-    margin-top           : 70px;
+    margin-top           : 5rem;
 }
 
 .client-card {
@@ -70,14 +70,14 @@
 .client-footer-bold-txt,
 .client-footer-txt-underline {
     font-size  : var(--sub-title-size);
-    font-weight: 400;
+    font-weight: 300;
     color      : var(--primary-white);
     text-align : center;
     margin     : 0;
 }
 
 .client-footer-bold-txt span {
-    font-weight: 900;
+    font-weight: 700;
 }
 
 .client-footer-txt-underline {

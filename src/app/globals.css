@@ -17,7 +17,7 @@
   --xl-font-size             : 50px;
   --title-size               : 40px;
   --responsive-title-size    : 30px;
-  --sub-title-size           : 17px;
+  --sub-title-size           : 1.3rem;
   --responsive-sub-title-size: 14px;
   --btns-font-size           : 16px;
   /*  */
@@ -164,4 +164,19 @@ picture {
     -ms-transform    : translateY(0);
     -o-transform     : translateY(0);
   }
+}
+.opacity{
+  animation:opacity 1s ease;
+
+  -webkit-animation:opacity 1s ease;
+}
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  } 
+  
 }
