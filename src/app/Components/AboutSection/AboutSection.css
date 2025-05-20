@@ -86,7 +86,7 @@
 @media (min-width: 220px) and (max-width: 520px) {
     .about-cards-container {
         height            : 100%;
-        grid-template-rows: repeat(21, 100px) !important;
+        grid-template-rows: repeat(21, 125px) !important;
     }
 
     .about-section__title {

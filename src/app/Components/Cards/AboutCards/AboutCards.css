@@ -274,6 +274,7 @@
     .about-card_3,
     .about-card_2{
         padding              : 25px 20px ;    
+        height: 100%;
     }
     .about-card_6 {
         grid-row             : 17 / 20;
