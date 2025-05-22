@@ -1,26 +1,26 @@
 .video-container {
     width     : 100%;
     height    : 100vh;
-    max-height: 900px;
+  
     position  : relative;
 
     z-index: 0;
 }
 
 .video-container::before {
-    content          : "";
-    width            : 120%;
-    height           : 45%;
-    position         : absolute;
-    bottom           : -120px;
-    left             : -20px;
-    background-color : var(--primary-bg);
-    transform        : rotate(-4deg);
-    -webkit-transform: rotate(-4deg);
-    -moz-transform   : rotate(-4deg);
-    -ms-transform    : rotate(-4deg);
-    -o-transform     : rotate(-4deg);
-    z-index          : 3;
+    content: "";
+    width: 120%;
+    height: 30%;
+    position: absolute;
+    bottom: -120px;
+    left: -20px;
+    background-color: var(--primary-bg);
+    transform: rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform: rotate(-5deg);
+    -ms-transform: rotate(-5deg);
+    -o-transform: rotate(-5deg);
+    z-index: 3;
 }
 
 .VideoSection {
@@ -81,24 +81,30 @@
 }
 
 .message-section {
-    width   : fit-content;
-    height  : fit-content;
+    width: 100%;
+    max-width: 736px;
+    height: 100%;
+    max-height:320px ;
     position: absolute;
-
-    bottom               : 150px;
-    left                 : 200px;
-    right                : 200px;
-    background-color     : rgba(255, 255, 255, 0.961);
-    padding              : 50px 60px;
-    border-radius        : 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius   : 12px;
-    -ms-border-radius    : 12px;
-    -o-border-radius     : 12px;
-    z-index              : 4;
+    bottom: 50px;
+    left: 200px;
+    right: 200px;
+    background-color: rgba(255, 255, 255, 0.922);
+    padding: 50px 80px;
+    border-radius: 29px;
+    -webkit-border-radius: 29px;
+    -moz-border-radius: 29px;
+    -ms-border-radius: 29px;
+    -o-border-radius: 29px;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+ 
 }
 
 .message-section .title {
+    width: 100%;
     font-size    : var(--title-size);
     font-weight  : 900;
     color        : var(--primary-black);
@@ -111,14 +117,16 @@
 }
 
 .message-section .description {
+      width: 100%;
     font-size  : var(--sub-title-size);
     font-weight: 300;
     color      : var(--primary-black);
-    margin-top : 10px;
+    margin-top : 13px;
 }
 
 .message-section .btn-section {
     width         : 100%;
+    max-width: 469px;
     height        : fit-content;
     display       : flex;
     flex-direction: row;
@@ -168,9 +176,15 @@
     background-color  : var(--primary-white);
 }
 
+.message-section .btn-section .second-btn .menu-icon {
+    width: 36px;
+    height: 36px;
+
+}
 .message-section .btn-section .second-btn:hover .menu-icon {
     fill  : var(--primary-black);
     stroke: var(--primary-black);
+
 }
 
 /* Media Query */
@@ -191,6 +205,9 @@
         left  : 20px;
         right : 20px;
         bottom: 50px;
+         max-width: fit-content;
+    height: 100%;
+    max-height:fit-content ;
     }
 }
 
@@ -201,6 +218,7 @@
 
     .message-section {
         width            : calc(100% - 40px);
+            max-height:fit-content ;
         left             : 50%;
         bottom           : -60px;
         transform        : translate(50%, -50%);

@@ -82,3 +82,11 @@
             -o-transform: scale(1);
     }
     }
+    @media  (max-width:769px) {
+        .blog_card{
+            max-width: 494px;
+            width: fit-content;
+            margin-inline: auto;
+        }
+        
+    }

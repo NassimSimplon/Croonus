@@ -102,14 +102,17 @@ export default function Blog() {
           </div>
         </div>
       </div>
-      <h1 className="about-section__title default-typewriter">
+  <div className="blog_title_section">
+        <h1 className="about-section__title default-typewriter">
         Croonus Blog<span>.</span>
       </h1>
+ 
       <div className="blog_page_card_section">
         {blogData?.map((item) => (
           <BlogCard key={item.id} {...item} />
         ))}
       </div>
+       </div>
     </section>
   );
 }

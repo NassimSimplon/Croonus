@@ -33,7 +33,7 @@ export const metadata = {
   authors: [{ name: "Nassim Khelifi", url: "https://www.croonus.com" }],
   generator: "Next.js",
   icons: {
-    icon: "/images/spinner.png",
+    icon: "/favicon.svg",
   },
   applicationName: "Croonus",
 };

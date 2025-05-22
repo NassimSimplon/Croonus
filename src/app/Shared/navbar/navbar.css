@@ -3,7 +3,7 @@
     display         : flex;
     align-items     : center;
     justify-content : space-between;
-    padding         : 60px 200px 0 200px;
+    padding         : 20px 200px 0 200px;
     position        : fixed;
     top             : 0;
     left            : 0;
@@ -176,7 +176,8 @@
 /* Media Query */
 @media (min-width: 481px) and (max-width: 1200px) {
     .navbar {
-        padding: 60px 20px 0px 20px;
+        padding: 20px 20px 0px 20px;
+        
     }
 
     .logo {
@@ -215,8 +216,8 @@
     }
 
     .menu-icon {
-        width: 50px;
-        height:50px;
+        width: 30px;
+        height:30px;
     }
 
     .fullscreen-navbar {
