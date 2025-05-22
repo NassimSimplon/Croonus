@@ -1,17 +1,18 @@
 .service_card {
-    width                : 100%;
-    max-width            : 490px;
-    height               : 100%;
-    border-radius        : 19px;
-    -webkit-border-radius: 19px;
-    -moz-border-radius   : 19px;
-    -ms-border-radius    : 19px;
-    -o-border-radius     : 19px;
-    padding              : 43px 40px;
-    overflow             : hidden;
-    position             : relative;
-    transition           : all 0.5s ease;
-    z-index              : 0;
+    width: 100%;
+    max-width: 490px;
+    height: 100%;
+    min-height: 100px;
+    border-radius: 29px;
+    -webkit-border-radius: 29px;
+    -moz-border-radius: 29px;
+    -ms-border-radius: 29px;
+    -o-border-radius: 29px;
+    padding: 30px 40px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.5s ease;
+    z-index: 0;
 }
  
 .service-card__title {

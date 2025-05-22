@@ -1,19 +1,38 @@
 .navbar {
-    width           : 100%;
-    display         : flex;
-    align-items     : center;
-    justify-content : space-between;
-    padding         : 20px 200px 0 200px;
-    position        : fixed;
-    top             : 0;
-    left            : 0;
-    z-index         : 9;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 200px 0 200px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9;
     background-color: transparent;
+    transition:top .9s ease ;
+    -webkit-transition:top .9s ease ;
+    -moz-transition:top .9s ease ;
+    -ms-transition:top .9s ease ;
+    -o-transition:top .9s ease ;
+}
+.navbar.sticky {
+  position: fixed;
+  top: -60px;
+  height: 60px;
+  animation: goDown 0.5s ease-in-out forwards;
+  background-color: var(--primary-bg);
+  padding-block: 45px ;
 }
 
-.navbar.scrolled {
-    background-color  : var(--primary-bg);
+@keyframes goDown {
+  0% {
+    top: -60px;
+  }
+  100% {
+    transform: translateY(60px);
+  }
 }
+ 
 
 .menu {
     width         : fit-content;
