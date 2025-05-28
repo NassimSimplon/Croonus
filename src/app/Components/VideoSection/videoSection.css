@@ -197,18 +197,27 @@
 
 @media (min-width: 599px) and (max-width: 1024px) {
     .video-container {
-        height    : 80vh;
+        height    : 70vh;
         max-height: 600px;
     }
+    .video-container::before {
+ 
+    bottom: -80px;
+  
+}
 
     .message-section {
         left  : 20px;
         right : 20px;
-        bottom: 50px;
+        bottom: 10px;
          max-width: fit-content;
     height: 100%;
     max-height:fit-content ;
+            width: 100%;
+
+    padding: 30px 50px;
     }
+  
 }
 
 @media (min-width: 280px) and (max-width: 598px) {
