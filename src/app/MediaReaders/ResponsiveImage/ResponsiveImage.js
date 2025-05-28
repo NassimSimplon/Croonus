@@ -13,7 +13,8 @@ const ResponsiveImage = ({
   height,
   className,
   lazyLoading,
-  type
+  type,
+  showLoader
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
@@ -54,6 +55,8 @@ ResponsiveImage.propTypes = {
   className: PropTypes.string,
   lazyLoading: PropTypes.bool,
   type: PropTypes.string,
+  showLoader:PropTypes.bool
+
 };
 
 ResponsiveImage.defaultProps = {
@@ -61,6 +64,8 @@ ResponsiveImage.defaultProps = {
   height: "auto",
   className: "",
   lazyLoading: true,
+  showLoader:true
+
 };
 
 export default memo(ResponsiveImage);

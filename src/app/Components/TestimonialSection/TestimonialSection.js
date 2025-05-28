@@ -200,7 +200,9 @@ const TestimonialSection = () => {
         Kažu o nama<span>.</span>
       </h1>
 
-      <div className="testimonial-wrapper">
+      <div className="testimonial-wrapper"
+         ref={setRef('testimonial-wrapper')}
+      data-scroll-id={`testimonial-wrapper`}>
         <div className={`testimonial-carousel ${fadeState}`}>
           {displayedItems.map((item) => (
             <TestimonialCard key={item.id} {...item} />

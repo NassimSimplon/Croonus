@@ -1,21 +1,14 @@
 import MoreOptionsIcon from "@/app/Icons/MoreOptionsIcon";
 import PropTypes from "prop-types";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
-import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 import { memo } from "react";
 
 const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
-  const { setRef, isInView } = useMultiScrollReveal(0.9);
-
+ 
   return (
     <div
-      className={`testimonial-card ${
-        isInView(`testimonial-card_${id}`)
-          ? ""
-          : ""
-      }`}
-      ref={setRef(`testimonial-card_${id}`)}
-      data-scroll-id={`testimonial-card_${id}`}
+      className={`testimonial-card `}
+ 
     >
       <div className="testimonial-image-wrapper">
         <ResponsiveImage
@@ -26,6 +19,8 @@ const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
           alt={alt}
           className="testimonial-image"
           type={type}
+  showLoader={false}
+
         />
       </div>
       <p className="testimonial-text">{testimony}</p>
