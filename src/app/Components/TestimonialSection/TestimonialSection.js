@@ -44,7 +44,7 @@ const testimonialList = [
     koja se nastavlja. Kada se sretnu pozitivna energija, entuzijazam i
     kreativnost ova dva tima, onda je rezultat ništa manje nego
     spektakularan. To je razlog zašto se radujemo...
-    `,
+   `,
     name: "Tamara Karapandžić",
     position: "Marketing i PR Menadžer",
     type: "png",
@@ -122,13 +122,18 @@ const testimonialList = [
   },
 ];
 
-const ANIMATION_DURATION = 300;
+const ANIMATION_DURATION = 100;
+
+ 
 
 const TestimonialSection = () => {
   const [index, setIndex] = useState(0);
   const [fadeState, setFadeState] = useState("fade-in");
   const [direction, setDirection] = useState("forward");
   const [itemsPerPage, setItemsPerPage] = useState(2);
+  const [displayedItems, setDisplayedItems] = useState(testimonialList.slice(0, 2));
+ 
+  const [isTransitioning, setIsTransitioning] = useState(false);
   const { setRef, isInView } = useMultiScrollReveal(0.9);
 
   useEffect(() => {
@@ -147,37 +152,39 @@ const TestimonialSection = () => {
 
   const maxIndex = testimonialList.length - itemsPerPage;
 
-  const visibleItems = useMemo(
-    () => testimonialList.slice(index, index + itemsPerPage),
-    [index, itemsPerPage]
-  );
+  const getNextIndex = (current, dir) => {
+    if (dir === "forward") {
+      return current < maxIndex ? current + itemsPerPage : current - itemsPerPage;
+    } else {
+      return current > 0 ? current - itemsPerPage : current + itemsPerPage;
+    }
+  };
 
-  const handleSlide = useCallback(() => {
+  const handleSlide = () => {
+    if (isTransitioning) return; // Prevent spamming clicks during animation
+    setIsTransitioning(true);
     setFadeState("fade-out");
 
+    const newIndex = getNextIndex(index, direction);
+
+    // If hitting boundaries, flip direction
+    if ((direction === "forward" && index >= maxIndex) || (direction === "backward" && index <= 0)) {
+      setDirection(direction === "forward" ? "backward" : "forward");
+    }
+
+ 
+
+    // Wait for fade-out to finish, then switch items and fade-in
     setTimeout(() => {
-      if (direction === "forward") {
-        if (index < maxIndex) {
-          setIndex(index + itemsPerPage);
-        } else {
-          setDirection("backward");
-          setIndex(index - itemsPerPage);
-        }
-      } else {
-        if (index > 0) {
-          setIndex(index - itemsPerPage);
-        } else {
-          setDirection("forward");
-          setIndex(index + itemsPerPage);
-        }
-      }
-
+      setIndex(newIndex);
+      setDisplayedItems(testimonialList.slice(newIndex, newIndex + itemsPerPage));
       setFadeState("fade-in");
+      setIsTransitioning(false);
     }, ANIMATION_DURATION);
-  }, [index, direction, itemsPerPage, maxIndex]);
+  };
 
-  const current = Math.min(index + itemsPerPage, testimonialList?.length);
-  const total = testimonialList?.length;
+  const current = Math.min(index + itemsPerPage, testimonialList.length);
+  const total = testimonialList.length;
 
   return (
     <section className="testimonialSection">
@@ -195,7 +202,7 @@ const TestimonialSection = () => {
 
       <div className="testimonial-wrapper">
         <div className={`testimonial-carousel ${fadeState}`}>
-          {visibleItems?.map((item) => (
+          {displayedItems.map((item) => (
             <TestimonialCard key={item.id} {...item} />
           ))}
         </div>
@@ -203,19 +210,17 @@ const TestimonialSection = () => {
         <div className="testimonial-footer-controls">
           <div className="testimonial-counter">{`${current}/${total}`}</div>
           <button
-           
-        className={`scroll-button    ${direction !== "forward" ? "scroll-button-right" : "scroll-button-left"}`}
+            className={`scroll-button ${direction !== "forward" ? "scroll-button-right" : "scroll-button-left"}`}
             onClick={handleSlide}
             aria-label="Navigate testimonials"
           >
-            <ArrowIcon
-              className={direction !== "forward" ? "left-arrow" : ""}
-            />
+            <ArrowIcon className={direction !== "forward" ? "left-arrow" : ""} />
           </button>
         </div>
       </div>
     </section>
   );
 };
+
 
 export default TestimonialSection;
