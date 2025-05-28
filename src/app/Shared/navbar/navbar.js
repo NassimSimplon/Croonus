@@ -14,7 +14,6 @@ const Navbar = () => {
   const [isSticky, setIsSticky] = useState(false);
   const { isOpen, openElement, closeElement } = useIsOpenElement();
 
-  // Sticky navbar logic using scroll
   useEffect(() => {
     const handleScroll = () => {
       const offset = window.scrollY;

@@ -4,12 +4,8 @@ import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import { memo } from "react";
 
 const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
- 
   return (
-    <div
-      className={`testimonial-card `}
- 
-    >
+    <div className="testimonial-card">
       <div className="testimonial-image-wrapper">
         <ResponsiveImage
           width="100"
@@ -19,8 +15,7 @@ const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
           alt={alt}
           className="testimonial-image"
           type={type}
-  showLoader={false}
-
+          showLoader={false}
         />
       </div>
       <p className="testimonial-text">{testimony}</p>
@@ -29,8 +24,7 @@ const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
           <strong>{name}</strong>
           <small>{position}</small>
         </div>
-        <MoreOptionsIcon className='testimonial-more-icon' />
-        
+        <MoreOptionsIcon className="testimonial-more-icon" />
       </div>
     </div>
   );

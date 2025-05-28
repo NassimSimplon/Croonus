@@ -1,262 +1,253 @@
 .video-container {
-    width     : 100%;
-   height    : 77vh;
-    position  : relative;
-    max-height:750px ;
-    z-index: 0;
+  width: 100%;
+  height: 77vh;
+  position: relative;
+  max-height: 750px;
+  z-index: 0;
 }
 
 .video-container::before {
-    content: "";
-    width: 120%;
-    height: 30%;
-    position: absolute;
-    bottom: -100px;
-    left: -20px;
-    background-color: var(--primary-bg);
-    transform: rotate(-4.5deg);
-    -webkit-transform: rotate(-4.5deg);
-    -moz-transform: rotate(-4.5deg);
-    -ms-transform: rotate(-4.5deg);
-    -o-transform: rotate(-4.5deg);
-    z-index: 3;
+  content: "";
+  width: 120%;
+  height: 30%;
+  position: absolute;
+  bottom: -100px;
+  left: -20px;
+  background-color: var(--primary-bg);
+  transform: rotate(-4.5deg);
+  -webkit-transform: rotate(-4.5deg);
+  -moz-transform: rotate(-4.5deg);
+  -ms-transform: rotate(-4.5deg);
+  -o-transform: rotate(-4.5deg);
+  z-index: 3;
 }
 
 .VideoSection {
-    position       : relative;
-    width          : 100%;
-    height         : 100%;
-    overflow       : hidden;
-    display        : flex;
-    justify-content: center;
-    align-items    : center;
-    text-align     : center;
-    color          : white;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
 }
 
 .video-background {
-    position         : absolute;
-    top              : 0;
-    left             : 0;
-    width            : 100%;
-    height           : 100%;
-    z-index          : -1;
-    overflow         : hidden;
-    animation        : scaleVideo 1.5s ease !important;
-    -webkit-animation: scaleVideo 1.5s ease !important;
-    background-color : var(--primary-bg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+  animation: scaleVideo 1.5s ease !important;
+  -webkit-animation: scaleVideo 1.5s ease !important;
+  background-color: var(--primary-bg);
 }
 
 @keyframes scaleVideo {
-    from {
-        transform        : scale(2);
-        -webkit-transform: scale(2);
-        -moz-transform   : scale(2);
-        -ms-transform    : scale(2);
-        -o-transform     : scale(2);
-    }
+  from {
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -moz-transform: scale(2);
+    -ms-transform: scale(2);
+    -o-transform: scale(2);
+  }
 
-    to {
-        transform        : scale(1);
-        -webkit-transform: scale(1);
-        -moz-transform   : scale(1);
-        -ms-transform    : scale(1);
-        -o-transform     : scale(1);
-    }
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
 }
 
 .video-background video {
-    position        : absolute;
-    top             : 50%;
-    left            : 50%;
-    transform       : translate(-50%, -50%) scale(1);
-    transform-origin: center;
-    min-width       : 100%;
-    min-height      : 100%;
-    width           : auto;
-    height          : auto;
-    object-fit      : contain;
-    z-index         : -1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  transform-origin: center;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  z-index: -1;
 }
 
 .message-section {
-    width: 100%;
-    max-width: 736px;
-    height: 100%;
-    max-height:320px ;
-    position: absolute;
-    bottom: 0;
-    left: 200px;
-    right: 200px;
-    background-color: rgba(255, 255, 255, 0.922);
-    padding: 50px 80px;
-    border-radius: 29px;
-    -webkit-border-radius: 29px;
-    -moz-border-radius: 29px;
-    -ms-border-radius: 29px;
-    -o-border-radius: 29px;
-    z-index: 4;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
- 
+  width: 100%;
+  max-width: 736px;
+  height: 100%;
+  max-height: 320px;
+  position: absolute;
+  bottom: 0;
+  left: 200px;
+  right: 200px;
+  background-color: rgba(255, 255, 255, 0.922);
+  padding: 50px 80px;
+  border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -moz-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -o-border-radius: 29px;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .message-section .title {
-    width: 100%;
-    font-size    : var(--title-size);
-    font-weight  : 900;
-    color        : var(--primary-black);
-    padding-right: 120px;
+  width: 100%;
+  font-size: var(--title-size);
+  font-weight: 900;
+  color: var(--primary-black);
+  padding-right: 120px;
 }
 
 .message-section .title span {
-    color    : var(--primary-green);
-    font-size: var(--title-size);
+  color: var(--primary-green);
+  font-size: var(--title-size);
 }
 
 .message-section .description {
-      width: 100%;
-    font-size  : var(--sub-title-size);
-    font-weight: 300;
-    color      : var(--primary-black);
-    margin-top : 13px;
+  width: 100%;
+  font-size: var(--sub-title-size);
+  font-weight: 300;
+  color: var(--primary-black);
+  margin-top: 13px;
 }
 
 .message-section .btn-section {
-    width         : 100%;
-    max-width: 469px;
-    height        : fit-content;
-    display       : flex;
-    flex-direction: row;
-    align-items   : center;
-    gap           : 10px;
-    margin-top    : 30px;
+  width: 100%;
+  max-width: 469px;
+  height: fit-content;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  margin-top: 30px;
 }
 
 .message-section .btn-section .first-btn,
 .message-section .btn-section .second-btn {
-    width: 100%;
-    height: 50px;
-    box-sizing:  content-box;
-    border-radius: 1px;
-    -webkit-border-radius: 10px;
-    -moz-border-radius: 1px;
-    -ms-border-radius: 1px;
-    -o-border-radius: 1px;  
-    color: var(--primary-white);
-    font-size: var(--btns-font-size);
-    font-weight: 400;
-    transition: all 0.2s ease-in-out;
-    -webkit-transition: all 0.2s ease-in-out;
-    -moz-transition: all 0.2s ease-in-out;
-    -ms-transition: all 0.2s ease-in-out;
-    -o-transition: all 0.2s ease-in-out;
+  width: 100%;
+  height: 50px;
+  box-sizing: content-box;
+  border-radius: 1px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  color: var(--primary-white);
+  font-size: var(--btns-font-size);
+  font-weight: 400;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
 }
 
 .message-section .btn-section .first-btn {
-    background-color: var(--primary-green);
+  background-color: var(--primary-green);
 }
 
 .message-section .btn-section .second-btn {
-    background-color: var(--primary-bg);
-    display         : flex;
+  background-color: var(--primary-bg);
+  display: flex;
 
-    flex-direction : row;
-    align-items    : center;
-    justify-content: center;
-    gap            : 7px;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
 }
 
 .message-section .btn-section .first-btn:hover,
 .message-section .btn-section .second-btn:hover {
- 
-    color             : var(--primary-black);
-    background-color  : var(--primary-white);
+  color: var(--primary-black);
+  background-color: var(--primary-white);
 }
 
 .message-section .btn-section .second-btn .menu-icon {
-    width: 36px;
-    height: 36px;
-
+  width: 36px;
+  height: 36px;
 }
 .message-section .btn-section .second-btn:hover .menu-icon {
-    fill  : var(--primary-black);
-    stroke: var(--primary-black);
-
+  fill: var(--primary-black);
+  stroke: var(--primary-black);
 }
 
 /* Media Query */
 
 @media (min-width: 1024px) and (max-width: 1200px) {
- 
-    .message-section {
-        left: 100px;
-    }
+  .message-section {
+    left: 100px;
+  }
 }
 
 @media (min-width: 599px) and (max-width: 1024px) {
-    .video-container {
-        height    : 70vh;
-        max-height: 650px;
-    }
-    .video-container::before {
- 
+  .video-container {
+    height: 70vh;
+    max-height: 650px;
+  }
+  .video-container::before {
     bottom: -8%;
-  
-}
+  }
 
-    .message-section {
-        left  : 20px;
-        right : 20px;
-        bottom: 10px;
-         max-width: fit-content;
+  .message-section {
+    left: 20px;
+    right: 20px;
+    bottom: 10px;
+    max-width: fit-content;
     height: 100%;
-    max-height:fit-content ;
-            width: 100%;
+    max-height: fit-content;
+    width: 100%;
 
     padding: 30px 50px;
-    }
-  
+  }
 }
 
 @media (min-width: 280px) and (max-width: 598px) {
-    .video-container {
-        height: 60vh;
-            max-height:550px ;
-    }
- 
+  .video-container {
+    height: 60vh;
+    max-height: 550px;
+  }
 
-    .message-section {
-        width: calc(100% - 40px);
-        max-height:fit-content ;
-        top: 65%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        padding: 30px 40px;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        -o-transform: translate(-50%, -50%);
-        -moz-transform: translate(-50%, -50%);
-}
+  .message-section {
+    width: calc(100% - 40px);
+    max-height: fit-content;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px 40px;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+  }
 
-    .message-section .btn-section {
-        width         : 100%;
-        flex-direction: column;
-    }
+  .message-section .btn-section {
+    width: 100%;
+    flex-direction: column;
+  }
 
-    .message-section .title {
-        padding-right: 0;
-        font-size    : calc(var(--responsive-title-size) - 2px);
-    }
+  .message-section .title {
+    padding-right: 0;
+    font-size: calc(var(--responsive-title-size) - 2px);
+  }
 
-    .message-section .description {
-        font-size: var(--responsive-sub-title-size);
-    }
+  .message-section .description {
+    font-size: var(--responsive-sub-title-size);
+  }
 }
 
 @media (max-height: 500px) and (max-width: 598px) {
-    .message-section {
-        top: 56%;
-    }
+  .message-section {
+    top: 56%;
+  }
 }

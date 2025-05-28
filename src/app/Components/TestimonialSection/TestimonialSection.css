@@ -49,6 +49,12 @@
   transition : transform 0.4s ease, opacity 0.4s ease;
   will-change: transform, opacity;
   height     : 100%;
+    position: relative;
+ 
+ 
+  justify-content: center;
+  align-items: stretch;
+  
 }
 
  
@@ -142,20 +148,20 @@
 
 .testimonial-carousel.fade-in {
   opacity: 1;
-  transition: opacity 0.3s ease-in;
-  -webkit-transition: opacity 0.3s ease-in;
-  -moz-transition: opacity 0.3s ease-in;
-  -ms-transition: opacity 0.3s ease-in;
-  -o-transition: opacity 0.3s ease-in;
+  transition: opacity 0.2s ease-in;
+  -webkit-transition: opacity 0.2s ease-in;
+  -moz-transition: opacity 0.2s ease-in;
+  -ms-transition: opacity 0.2s ease-in;
+  -o-transition: opacity 0.2s ease-in;
 }
 
 .testimonial-carousel.fade-out {
   opacity: 0;
-  transition: opacity 0.3s ease-out;
-  -webkit-transition: opacity 0.3s ease-out;
-  -moz-transition: opacity 0.3s ease-out;
-  -ms-transition: opacity 0.3s ease-out;
-  -o-transition: opacity 0.3s ease-out;
+  transition: opacity 0.2s ease-out;
+  -webkit-transition: opacity 0.2s ease-out;
+  -moz-transition: opacity 0.2s ease-out;
+  -ms-transition: opacity 0.2s ease-out;
+  -o-transition: opacity 0.2s ease-out;
 }
 /*  Media  */
 @media (min-width: 1024px) and (max-width: 1320px) {

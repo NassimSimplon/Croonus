@@ -30,7 +30,7 @@ const ResponsiveImage = ({
   return (
     <picture>
       <source srcSet={webpSrc} type={`image/${type}`} />
-      {(hasError || !isLoaded) && <CroonusSpiner />}
+      {(showLoader && (hasError || !isLoaded) )&& <CroonusSpiner />}
       <Image
         src={fallbackSrc}
         alt={alt}
