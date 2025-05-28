@@ -10,8 +10,8 @@ const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
     <div
       className={`testimonial-card ${
         isInView(`testimonial-card_${id}`)
-          ? ""
-          : ""
+          ? "opacity"
+          : "hidden-element"
       }`}
       ref={setRef(`testimonial-card_${id}`)}
       data-scroll-id={`testimonial-card_${id}`}

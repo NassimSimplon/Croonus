@@ -3,7 +3,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 20px 200px 0 200px;
+    padding: 35px 200px 0 200px;
     position: fixed;
     top: 0;
     left: 0;
@@ -15,6 +15,13 @@
     -ms-transition:top .9s ease ;
     -o-transition:top .9s ease ;
 }
+.logo{
+    width: 100%;
+    max-width: 300px;
+    height: 100%;
+    max-height: 100px;
+}
+ 
 .navbar.sticky {
   position: fixed;
   top: -60px;

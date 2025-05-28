@@ -100,8 +100,8 @@ picture {
   overflow         : hidden;
   max-width        : 100%;
   visibility       : visible;
-  animation        : defaultTypewriter 1.2s ease-out forwards ;
-  -webkit-animation: defaultTypewriter 1.2s ease-out forwards ;
+  animation        : defaultTypewriter 1.2s ease-out forwards 0.2s;
+  -webkit-animation: defaultTypewriter 1.2s ease-out forwards 0.2s;
   clip-path        : inset(0 100% 0 0);
   -webkit-clip-path: inset(0 100% 0 0);
 }
@@ -133,13 +133,13 @@ picture {
 @keyframes revealClip {
   
   0% {
-        opacity  : 0;
+   
     clip-path        : inset(0 100% 0 0);
     -webkit-clip-path: inset(0 100% 0 0);
   }
 
   100% {
-        opacity  : 1;
+      
     clip-path        : inset(0 0% 0 0);
     -webkit-clip-path: inset(0 0% 0 0);
   }

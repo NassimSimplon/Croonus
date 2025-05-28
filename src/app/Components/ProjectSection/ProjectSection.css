@@ -98,7 +98,7 @@
 .project-section .project-card-footer_title {
   color      : #ecebea;
   font-size  : calc(var(--sub-title-size) + 6px);
-  font-weight: 900;
+  font-weight: 300;
 }
 
 .project-section .project-card-link {
@@ -115,9 +115,11 @@
   background-color     : var(--primary-white);
 }
 
-.project-section .project-card-link:hover {
+.project-section .scroll-item:hover .project-card-link {
   background-color: var(--primary-green);
 }
+
+ 
 
 .project-section .project-section-footer {
   text-decoration: underline;
