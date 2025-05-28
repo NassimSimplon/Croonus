@@ -104,4 +104,7 @@
     .about-section__title {
         font-size: calc(var(--title-size) - 10px);
     }
+    .about-section__description,.about-section_second_descriptio{
+        padding-inline: 0;
+    }
 }

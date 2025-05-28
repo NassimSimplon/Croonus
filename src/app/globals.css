@@ -36,6 +36,7 @@ body {
   background-color: var(--primary-bg);
   position        : relative;
   height          : fit-content;
+ 
 }
 
 main {
@@ -89,20 +90,14 @@ picture {
   border-radius: 8px;
 }
 
-.footer-logo {
-  position: absolute;
-  right   : 0;
-  bottom  : 35px;
-  z-index : -1;
-}
 
 .default-typewriter {
-  overflow         : hidden;
-  max-width        : 100%;
-  visibility       : visible;
-  animation        : defaultTypewriter 1.2s ease-out forwards 0.2s;
-  -webkit-animation: defaultTypewriter 1.2s ease-out forwards 0.2s;
-  clip-path        : inset(0 100% 0 0);
+  overflow: hidden;
+  max-width: 100%;
+  visibility: visible;
+  animation: defaultTypewriter 1.2s ease-out forwards ;
+  -webkit-animation: defaultTypewriter 1.2s ease-out forwards ;
+  clip-path: inset(0 100% 0 0);
   -webkit-clip-path: inset(0 100% 0 0);
 }
 
@@ -121,12 +116,12 @@ picture {
 
  
 .responsive-typewriter {
-  overflow         : hidden;
-  max-width        : 100%;
-  visibility       : visible;
-  animation        : revealClip 1.2s ease-out forwards 0.2s;
-  -webkit-animation: revealClip 1.2s ease-out forwards 0.2s;
-  clip-path        : inset(0 100% 0 0);
+  overflow: hidden;
+  max-width: 100%;
+  visibility: visible;
+  animation: revealClip 1s ease  forwards;
+  -webkit-animation: revealClip 1s ease  forwards;
+  clip-path: inset(0 100% 0 0);
   -webkit-clip-path: inset(0 100% 0 0);
 }
 

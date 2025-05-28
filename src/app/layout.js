@@ -1,7 +1,6 @@
 import "./globals.css";
 import BeforeFooterSection from "./Shared/beforeFooterSection/beforeFooterSection";
 import Footer from "./Shared/Footer/Footer";
-import Image from "next/image";
 import Navbar from "./Shared/navbar";
 import PropTypes from "prop-types";
 import { Montserrat } from "next/font/google";
@@ -46,14 +45,6 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
         <BeforeFooterSection />
         <Footer />
-        <Image
-          src={"/images/Croonus_footer_Logo.png"}
-          width={400}
-          height={350}
-          alt={"Croonus footer Logo"}
-          className={"footer-logo"}
-          priority
-        />
       </body>
     </html>
   );

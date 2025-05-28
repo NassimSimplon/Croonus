@@ -1,3 +1,4 @@
+import MoreOptionsIcon from "@/app/Icons/MoreOptionsIcon";
 import PropTypes from "prop-types";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
@@ -33,13 +34,8 @@ const TestimonialCard = ({ src, alt, testimony, name, position, type, id }) => {
           <strong>{name}</strong>
           <small>{position}</small>
         </div>
-        <ResponsiveImage
-          width="30"
-          height="30"
-          webpSrc="/more.svg"
-          fallbackSrc="/more.svg"
-          alt={alt}
-        />
+        <MoreOptionsIcon className='testimonial-more-icon' />
+        
       </div>
     </div>
   );

@@ -1,12 +1,14 @@
 import "./Footer.css";
+import FooterIcon from "@/app/Icons/Footer";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
 function Footer() {
   return (
-    <footer className="app-footer">
-      <div className="app-footer_wrapper">
+    <footer className="footer-parent-container">
+      <div  className="app-footer">
+             <div className="app-footer_wrapper">
         <div className="app-footer_body">
           <Image
             className="app-footer_logo"
@@ -49,6 +51,8 @@ function Footer() {
           © 2016-2025 Croonus Technologies DOO. Sva prava zadržana.
         </p>
       </div>
+      </div>
+       <FooterIcon   className={"footer-logo"} />
     </footer>
   );
 }

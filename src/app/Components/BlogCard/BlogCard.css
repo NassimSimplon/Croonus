@@ -56,6 +56,7 @@
 
 .blog_card_more_icon {
     margin-top: 23px;
+    fill: var(--primary-white);
 }
 
 .blog_card_more_icon:hover {

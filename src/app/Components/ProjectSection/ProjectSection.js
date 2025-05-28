@@ -1,6 +1,8 @@
 "use client";
 import "./ProjectSection.css";
+import ArrowIcon from "@/app/Icons/ArrowIcon";
 import Link from "next/link";
+import LinkIcon from "@/app/Icons/Link";
 import React from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
@@ -65,17 +67,15 @@ const ProjectSection = () => {
   return (
     <section className="project-section">
       <h1
-        className={`project-section_title ${
-          isInView("project-section_title")
+        className={`project-section_title ${isInView("project-section_title")
             ? "responsive-typewriter"
             : "hidden-element"
-        }`}
+          }`}
         ref={setRef("project-section_title")}
         data-scroll-id="project-section_title"
       >
         Naši projekti<span>.</span>
       </h1>
-
       <div className="scroller-wrapper">
         <button
           className="scroll-button left"
@@ -83,14 +83,7 @@ const ProjectSection = () => {
           disabled={!canScrollLeft}
           aria-label="Scroll Left"
         >
-          <ResponsiveImage
-            className="left-arrow"
-            width="25"
-            height="25"
-            webpSrc="/right-chevron.svg"
-            fallbackSrc="/right-chevron.svg"
-            alt="Scroll left"
-          />
+          <ArrowIcon className="left-arrow" />
         </button>
 
         <div className="scroll-container" ref={containerRef}>
@@ -98,11 +91,10 @@ const ProjectSection = () => {
             {projectList.map(({ id, src, alt, title, link, type }) => (
               <div
                 key={id}
-                className={`scroll-item ${
-                  isInView(`scroll-item_${id}`)
+                className={`scroll-item ${isInView(`scroll-item_${id}`)
                     ? "fade-up-element"
                     : "hidden-element"
-                }`}
+                  }`}
                 ref={setRef(`scroll-item_${id}`)}
                 data-scroll-id={`scroll-item_${id}`}
               >
@@ -122,41 +114,27 @@ const ProjectSection = () => {
                     target="_blank"
                     className="project-card-link"
                   >
-                    <ResponsiveImage
-                      width="20"
-                      height="20"
-                      webpSrc="/link.svg"
-                      fallbackSrc="/link.svg"
-                      alt="Link icon"
-                    />
+                    <LinkIcon className="link-project-card_icon" />
                   </Link>
                 </div>
               </div>
             ))}
           </div>
         </div>
-
         <button
           className="scroll-button right"
           onClick={() => scroll("right")}
           disabled={!canScrollRight}
           aria-label="Scroll Right"
         >
-          <ResponsiveImage
-            width="25"
-            height="25"
-            webpSrc="/right-chevron.svg"
-            fallbackSrc="/right-chevron.svg"
-            alt="Scroll right"
-          />
+          <ArrowIcon />
         </button>
       </div>
       <p
-        className={`project-section-footer ${
-          isInView("project-section-footer")
+        className={`project-section-footer ${isInView("project-section-footer")
             ? "responsive-typewriter"
             : "hidden-element"
-        }`}
+          }`}
         ref={setRef("project-section-footer")}
         data-scroll-id="project-section-footer"
       >

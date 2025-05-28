@@ -60,7 +60,12 @@
   -ms-transform    : rotate(180deg);
   -o-transform     : rotate(180deg);
 }
-
+.scroll-button-right{
+  padding-right: 8px;
+}
+.scroll-button-left{
+  padding-left: 8px;
+}
 /*  CARD  */
 .testimonial-card {
   flex            : 1 1 calc(50% - 1rem);
@@ -94,6 +99,9 @@
   display        : flex;
   justify-content: space-between;
   align-items    : center;
+}
+.testimonial-more-icon{
+  fill: var(--primary-green);
 }
 
 .testimonial-footer {
