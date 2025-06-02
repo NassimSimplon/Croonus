@@ -68,7 +68,7 @@ const ProjectSection = () => {
     <section className="project-section">
       <h1
         className={`project-section_title ${isInView("project-section_title")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
           }`}
         ref={setRef("project-section_title")}
@@ -132,7 +132,7 @@ const ProjectSection = () => {
       </div>
       <p
         className={`project-section-footer ${isInView("project-section-footer")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
           }`}
         ref={setRef("project-section-footer")}

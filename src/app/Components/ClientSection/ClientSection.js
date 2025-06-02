@@ -36,7 +36,7 @@ const ClientSection = () => {
 
   const titleId = "client-section-title";
   const titleClass = isInView(titleId)
-    ? "responsive-typewriter"
+    ? "fade-up-element"
     : "hidden-element";
 
   return (
@@ -83,7 +83,7 @@ const ClientSection = () => {
       </div>
       <div
         className={`client-footer ${isInView("client-footer")
-          ? "responsive-typewriter"
+          ? "fade-up-element"
           : "hidden-element"
           }`}
         ref={setRef("client-footer")}

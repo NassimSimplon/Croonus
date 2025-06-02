@@ -10,7 +10,7 @@ const BeforeFooterSection = () => {
       <h1
         className={`beforeFooterSection__title ${
           isInView("beforeFooterSection__title")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
         }`}
         ref={setRef("beforeFooterSection__title")}

@@ -8,6 +8,7 @@ import VideoSection from "./Components/VideoSection";
 import YoutubeModal from "./Components/YoutubeModal";
 import useIsOpenElement from "./CustomHooks/useIsOpenElement";
 
+ 
 export default function Home() {
   const { isOpen, openElement, closeElement } = useIsOpenElement();
 

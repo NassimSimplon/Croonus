@@ -103,7 +103,7 @@ export default function Blog() {
         </div>
       </div>
   <div className="blog_title_section">
-        <h1 className="about-section__title default-typewriter">
+        <h1 className="about-section__title fade-up-element">
         Croonus Blog<span>.</span>
       </h1>
  

@@ -83,7 +83,7 @@ const AboutSection = () => {
       <h1
         className={`about-section__title ${
           isInView("about-section__title")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
         }`}
         ref={setRef("about-section__title")}
@@ -95,7 +95,7 @@ const AboutSection = () => {
       <p
         className={`about-section__description ${
           isInView("about-section__description")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
         }`}
         ref={setRef("about-section__description")}
@@ -112,7 +112,7 @@ const AboutSection = () => {
       <p
         className={`about-section_second_description    ${
           isInView("about-section_second_description")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
         }`}
         ref={setRef("about-section_second_description")}

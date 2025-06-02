@@ -193,7 +193,7 @@ const TestimonialSection = () => {
       <h1
         className={`testimonialSection__title ${
           isInView("testimonialSection__title")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
         }`}
         ref={setRef("testimonialSection__title")}

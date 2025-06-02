@@ -22,10 +22,10 @@ const VideoSection = ({ openElement }) => {
         </div>
       </div>
       <div className="message-section">
-        <h1 className="title default-typewriter">
+        <h1 className="title fade-up-element">
           Pronašli ste nas<span>.</span>
         </h1>
-        <p className="description default-typewriter">
+        <p className="description fade-up-element">
           Sada pomozimo kupcima
           <br />
           da pronađu vaše proizvode.

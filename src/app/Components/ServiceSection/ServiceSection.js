@@ -68,7 +68,7 @@ const ServiceSection = () => {
       <h1
         className={`service-section-title ${
           isInView("service-section-title")
-            ? "responsive-typewriter"
+            ? "fade-up-element"
             : "hidden-element"
         }`}
         ref={setRef("service-section-title")}
