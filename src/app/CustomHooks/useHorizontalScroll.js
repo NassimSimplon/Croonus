@@ -1,37 +1,57 @@
-"use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 
-export const useHorizontalScroll = (scrollStep = 316) => {
+export const useHorizontalScroll = (scrollStep) => {
   const containerRef = useRef(null);
   const [canScrollLeft, setCanScrollLeft] = useState(false);
-  const [canScrollRight, setCanScrollRight] = useState(false);
+  const [canScrollRight, setCanScrollRight] = useState(true);
 
-  const updateButtons = useCallback(() => {
+  const updateScrollState = useCallback(() => {
     const el = containerRef.current;
     if (!el) return;
+
     setCanScrollLeft(el.scrollLeft > 0);
-    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth - 1);
-  }, []);
+    setCanScrollRight(el.scrollLeft + el.clientWidth < el.scrollWidth);
+  }, [containerRef]);
 
-  const scroll = useCallback((dir) => {
-    const el = containerRef.current;
-    if (!el) return;
-    el.scrollBy({ left: dir === "left" ? -scrollStep : scrollStep, behavior: "smooth" });
-  }, [scrollStep]);
+  const scroll = useCallback(
+    (dir) => {
+      const el = containerRef.current;
+      if (!el) return;
+
+      if (el.scrollLeft + el.clientWidth >= el.scrollWidth && dir === "right") {
+        el.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+      } else if (el.scrollLeft === 0 && dir === "left") {
+        el.scrollTo({
+          left: el.scrollWidth - el.clientWidth,
+          behavior: "smooth",
+        });
+      } else {
+        el.scrollBy({
+          left: dir === "left" ? -scrollStep : scrollStep,
+          behavior: "smooth",
+        });
+      }
+    },
+    [scrollStep]
+  );
 
   useEffect(() => {
     const el = containerRef.current;
     if (!el) return;
 
-    updateButtons();
-    el.addEventListener("scroll", updateButtons);
-    window.addEventListener("resize", updateButtons);
+    updateScrollState();
+
+    el.addEventListener("scroll", updateScrollState);
+    window.addEventListener("resize", updateScrollState);
 
     return () => {
-      el.removeEventListener("scroll", updateButtons);
-      window.removeEventListener("resize", updateButtons);
+      el.removeEventListener("scroll", updateScrollState);
+      window.removeEventListener("resize", updateScrollState);
     };
-  }, [updateButtons]);
+  }, [updateScrollState]);
 
   return {
     containerRef,

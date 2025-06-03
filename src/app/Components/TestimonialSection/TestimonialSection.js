@@ -1,10 +1,15 @@
 "use client";
 import "./TestimonialSection.css";
 import ArrowIcon from "@/app/Icons/ArrowIcon";
-import React, { useCallback, useEffect, useMemo, useState } from "react";
-import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import TestimonialCard from "../Cards/TestimonialCard";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
+import { useHorizontalScroll } from "@/app/CustomHooks/useHorizontalScroll";
+
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 const testimonialList = [
   {
@@ -122,80 +127,71 @@ const testimonialList = [
   },
 ];
 
-const ANIMATION_DURATION = 200;
-
 const TestimonialSection = () => {
-  const [index, setIndex] = useState(0);
-  const [fadeState, setFadeState] = useState("fade-in");
-  const [direction, setDirection] = useState("forward");
   const [itemsPerPage, setItemsPerPage] = useState(2);
-  const [displayedItems, setDisplayedItems] = useState(
-    testimonialList.slice(0, 2)
-  );
-  const [isTransitioning, setIsTransitioning] = useState(false);
+  const [current, setCurrent] = useState(2);
+  const [width, setWidth] = useState();
+  const widthRef = useRef(null);
   const { setRef, isInView } = useMultiScrollReveal(0.9);
+  const [isClicking, setIsClicking] = useState(false);
+  const timerRef = useRef(null);
+  const total = testimonialList.length;
+  const cardWidth = (itemsPerPage === 2 ? width - 32 : width) / itemsPerPage;
+  const { containerRef, scroll } = useHorizontalScroll(cardWidth + 32);
+  const trackStyle = {
+    display: "grid",
+    gridTemplateColumns: `repeat(${testimonialList.length}, ${cardWidth}px)`,
+    gap: "2rem",
+  };
+
+  useEffect(() => {
+    if (containerRef.current) {
+      const divWidth = containerRef.current.offsetWidth;
+
+      setWidth(divWidth);
+    }
+  }, [containerRef]);
 
   useEffect(() => {
     const updateItemsPerPage = () => {
+      console.log(containerRef.current, "containerRef.current");
       if (window.innerWidth <= 1024) {
         setItemsPerPage(1);
+        setCurrent(1);
       } else {
         setItemsPerPage(2);
+        setCurrent(2);
       }
     };
 
     updateItemsPerPage();
     window.addEventListener("resize", updateItemsPerPage);
     return () => window.removeEventListener("resize", updateItemsPerPage);
-  }, []);
+  }, [containerRef]);
 
-  const maxIndex = testimonialList.length - itemsPerPage;
-
-  const getNextIndex = (current, dir) => {
-    if (dir === "forward") {
-      return current < maxIndex
-        ? current + itemsPerPage
-        : current - itemsPerPage;
-    } else {
-      return current > 0 ? current - itemsPerPage : current + itemsPerPage;
-    }
+  const handleClick = () => {
+    if (isClicking) return;
+    setIsClicking(true);
+    setCurrent((prev) => {
+      if (prev === testimonialList.length + 0) {
+        return itemsPerPage;
+      }
+      return prev + 1;
+    });
+    scroll("right");
+    clearTimeout(timerRef.current);
+    timerRef.current = setTimeout(() => {
+      setIsClicking(false);
+    }, 500);
   };
-
-  const handleSlide = () => {
-    if (isTransitioning) return;
-    setIsTransitioning(true);
-    setFadeState("fade-out");
-
-    const newIndex = getNextIndex(index, direction);
-
-    if (
-      (direction === "forward" && index >= maxIndex) ||
-      (direction === "backward" && index <= 0)
-    ) {
-      setDirection(direction === "forward" ? "backward" : "forward");
-    }
-
-    setTimeout(() => {
-      setIndex(newIndex);
-      setDisplayedItems(
-        testimonialList.slice(newIndex, newIndex + itemsPerPage)
-      );
-      setFadeState("fade-in");
-      setIsTransitioning(false);
-    }, ANIMATION_DURATION);
-  };
-
-  const current = Math.min(index + itemsPerPage, testimonialList.length);
-  const total = testimonialList.length;
 
   return (
     <section className="testimonialSection">
       <h1
-        className={`testimonialSection__title ${
-          isInView("testimonialSection__title")
-            ? "fade-up-element"
-            : "hidden-element"
-        }`}
+        className={`testimonialSection__title ${isInView("testimonialSection__title")
+          ? "fade-up-element"
+          : "hidden-element"
+          }`}
         ref={setRef("testimonialSection__title")}
         data-scroll-id="testimonialSection__title"
       >
@@ -203,32 +199,32 @@ const TestimonialSection = () => {
       </h1>
 
       <div
-        className={`testimonial-wrapper ${
-          isInView(`testimonial-wrapper`) ? "opacity" : "hidden-element"
-        }`}
+        className={`testimonial-wrapper ${isInView(`testimonial-wrapper`) ? "opacity" : "hidden-element"
+          }`}
         ref={setRef("testimonial-wrapper")}
         data-scroll-id={`testimonial-wrapper`}
       >
-        <div className={`testimonial-carousel ${fadeState}`}>
-          {displayedItems.map((item) => (
-            <TestimonialCard key={item.id} {...item} />
-          ))}
+        <div className="testimonial-carousel-container" ref={containerRef}>
+          {" "}
+          <div
+            className={`testimonial-carousel fade-in`}
+            style={{ ...trackStyle }}
+            ref={widthRef}
+          >
+            {testimonialList.map((item) => (
+              <TestimonialCard key={item.id} {...item}  />
+            ))}
+          </div>
         </div>
 
         <div className="testimonial-footer-controls">
           <div className="testimonial-counter">{`${current}/${total}`}</div>
           <button
-            className={`scroll-button ${
-              direction !== "forward"
-                ? "scroll-button-right"
-                : "scroll-button-left"
-            }`}
-            onClick={handleSlide}
+            className={`scroll-button  scroll-button-left`}
+            onClick={handleClick}
             aria-label="Navigate testimonials"
           >
-            <ArrowIcon
-              className={direction !== "forward" ? "left-arrow" : ""}
-            />
+            <ArrowIcon />
           </button>
         </div>
       </div>
