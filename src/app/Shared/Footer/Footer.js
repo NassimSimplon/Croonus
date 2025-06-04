@@ -10,6 +10,7 @@ function Footer() {
       <div  className="app-footer">
              <div className="app-footer_wrapper">
         <div className="app-footer_body">
+          <Link href="/">
           <Image
             className="app-footer_logo"
             src="/images/Croonus _footer.png"
@@ -17,6 +18,7 @@ function Footer() {
             width={330}
             height={70}
           />
+          </Link>
           <div className="app-footer_contact">
             <h4 className="app-footer_email">info@croonus.com</h4>
             <h4 className="app-footer_location">
