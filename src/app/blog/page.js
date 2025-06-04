@@ -1,3 +1,4 @@
+"use client";
 import "../Components/AboutSection/AboutSection.css";
 import "./blog.css";
 import BlogCard from "../Components/BlogCard";

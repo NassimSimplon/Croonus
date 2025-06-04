@@ -90,7 +90,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={closeElement}>
+              <Link href="/Clients" onClick={closeElement}>
                 Zakažite online sastanak
               </Link>
             </li>

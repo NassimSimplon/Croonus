@@ -1,4 +1,5 @@
 import "./ClientSection.css";
+import Link from "next/link";
 import React from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
@@ -91,7 +92,7 @@ const ClientSection = () => {
         <p className="client-footer-bold-txt">
           ...i još <span>250</span> klijenata.
         </p>
-        <p className="client-footer-txt-underline">Pogledajte sve klijente</p>
+     <Link href="/Clients">  <p className="client-footer-txt-underline">Pogledajte sve klijente</p></Link> 
       </div>
     </section>
   );

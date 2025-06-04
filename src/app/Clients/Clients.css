@@ -1,0 +1,76 @@
+.clients-page {
+    width           : 100%;
+    height          : 100%;
+    overflow        : hidden;
+    background-color: var(--primary-bg);
+}
+
+.clients_page_video {
+    width     : 100%;
+    height    : 100vh;
+    max-height: 370px;
+    min-height: 178.812px;
+    position  : relative;
+
+    z-index: 0;
+}
+
+.clients_page_video video {
+    width: 100%;
+}
+
+.clients_page_video::after {
+    content          : "";
+    width            : 130% !important;
+    height           : 170px;
+    position         : absolute;
+    bottom           : -90px;
+    left             : -30px;
+    background-color : var(--primary-bg);
+    z-index          : 1;
+    transform        : rotate(-5deg);
+    -webkit-transform: rotate(-5deg);
+    -moz-transform   : rotate(-5deg);
+    -ms-transform    : rotate(-5deg);
+    -o-transform     : rotate(-5deg);
+}
+
+.clients_page_section {
+    width           : 100%;
+    height          : 100%;
+    background-color: var(--primary-bg);
+    position        : relative;
+    z-index         : 2;
+    padding         : 100px 30px 20px 30px;
+}
+
+.clients_page_section .client-section {
+    margin-top    : 0;
+    padding-inline: 0;
+}
+
+.clients_page_section .client-section .clientList {
+    margin-top: 7rem;
+}
+
+@media (min-width: 1440px) {
+    .clients_page_video::after {
+        height: 250px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    .clients_page_video,
+    .clients_page_video .VideoSection {
+        max-height: 300px !important;
+    }
+}
+
+@media (min-width: 220px) and (max-width: 768px) {
+
+    .clients_page_video,
+    .clients_page_video .VideoSection {
+        max-height: 260px !important;
+    }
+}
