@@ -52,7 +52,9 @@ const Navbar = () => {
     <header id="header_nav" ref={navbarRef}>
       <nav className={`navbar ${isSticky ? "sticky" : ""}`}>
         <div className="header__row">
-       <Link href="/"><Logo className="logo" /></Link>   
+          <Link href="/">
+            <Logo className="logo" />
+          </Link>
         </div>
         <div className="menu">
           <h6 className="link">English</h6>
