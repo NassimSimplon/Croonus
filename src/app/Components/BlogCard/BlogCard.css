@@ -28,6 +28,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+    border-radius: 12px;
 }
 
 .blog_card_image {
@@ -45,6 +47,7 @@
   -moz-transition: all 0.3s ease;
   -ms-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
+    border:solid 1px var(--primary-white);
 }
 
 .blog_card_content {

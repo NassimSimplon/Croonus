@@ -48,7 +48,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px 20px;
-  margin: 5rem auto 0 auto;
+  margin: 7rem auto 0 auto;
   padding-inline: 30px;
   z-index: 9;
   position: relative;
