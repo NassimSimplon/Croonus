@@ -1,93 +1,100 @@
 .blog_card {
-    width        : 100%;
-    height       : fit-content;
-    border-radius: 12px;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+
+  position: relative;
+
+  padding-bottom: 53px;
 }
 
 .blog_card:hover .blog_card_image {
-    border            : solid 1px var(--primary-green);
-    transform         : scale(1.04);
-    -webkit-transform : scale(1.04);
-    -moz-transform    : scale(1.04);
-    -ms-transform     : scale(1.04);
-    -o-transform      : scale(1.04);
-    box-shadow        : 0px 3px 9px 0px rgba(0, 0, 0, 0.5);
-    -webkit-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow   : 0px 3px 9px 0px rgba(0, 0, 0, 0.5);
+  border: solid 1px var(--primary-green);
+  transform: scale(1.04);
+  -webkit-transform: scale(1.04);
+  -moz-transform: scale(1.04);
+  -ms-transform: scale(1.04);
+  -o-transform: scale(1.04);
+  box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 3px 9px 0px rgba(0, 0, 0, 0.5);
 }
-.blog_card_image_wrapper{
-    width                : 100%;
-    height               : 100%;
-    min-height           : 130px;
-    object-fit           : cover;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.blog_card_image_wrapper {
+  width: 100%;
+  height: fit-content;
+  min-height: 130px;
+  object-fit: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .blog_card_image {
-    width                : 100%;
-    height               : 100%;
-    max-height           : 274px;
-    object-fit           : cover;
-    border-radius        : 12px;
-    -webkit-border-radius: 12px;
-    -moz-border-radius   : 12px;
-    -ms-border-radius    : 12px;
-    -o-border-radius     : 12px;
-    transition           : all 0.3s ease;
-    -webkit-transition   : all 0.3s ease;
-    -moz-transition      : all 0.3s ease;
-    -ms-transition       : all 0.3s ease;
-    -o-transition        : all 0.3s ease;
+  width: 100%;
+  height: 100%;
+  max-height: 274px;
+  object-fit: cover;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  transition: all 0.3s ease;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -ms-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
 }
 
 .blog_card_content {
-    width     : 100%;
-    height    : fit-content;
-    margin-top: 27px;
+  width: 100%;
+  height: fit-content;
+  margin-top: 27px;
 }
 
 .blog_card_title {
-    font-size  : var(--sub-title-size);
-    color      : var(--primary-white);
-    font-weight: 400;
+  font-size: var(--sub-title-size);
+  color: var(--primary-white);
+  font-weight: 300;
 }
 
 .blog_card_more_icon {
-    margin-top: 23px;
-    fill: var(--primary-white);
+  fill: var(--primary-white);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: all 0.3s ease;
 }
 
-.blog_card_more_icon:hover {
-    fill: var(--primary-green);
+.blog_card:hover .blog_card_more_icon {
+  fill: var(--primary-green);
 }
-.blog_page_video  .video-background {
-    animation: blogScaleVideo 1.2s ease ;
-    -webkit-animation: blogScaleVideo 1.2s ease ;
+.blog_page_video .video-background {
+  animation: blogScaleVideo 1.2s ease;
+  -webkit-animation: blogScaleVideo 1.2s ease;
 }
-    @keyframes blogScaleVideo {
-        from {
-         transform: scale(1.7);
-         -webkit-transform: scale(1.7);
-         -moz-transform: scale(1.7);
-         -ms-transform: scale(1.7);
-         -o-transform: scale(1.7);
+@keyframes blogScaleVideo {
+  from {
+    transform: scale(1.7);
+    -webkit-transform: scale(1.7);
+    -moz-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    -o-transform: scale(1.7);
+  }
+
+  to {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+  }
 }
-    
-        to {
-            transform: scale(1);
-            -webkit-transform: scale(1);
-            -moz-transform: scale(1);
-            -ms-transform: scale(1);
-            -o-transform: scale(1);
-    }
-    }
-    @media  (max-width:769px) {
-        .blog_card{
-            max-width: 494px;
-            width: fit-content;
-            margin-inline: auto;
-        }
-        
-    }
+@media (max-width: 769px) {
+  .blog_card {
+    max-width: 494px;
+    width: fit-content;
+    margin-inline: auto;
+  }
+}
