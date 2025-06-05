@@ -80,7 +80,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={closeElement}>
+              <Link href="/Clients" onClick={closeElement}>
                 Reference
               </Link>
             </li>
@@ -90,7 +90,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/Clients" onClick={closeElement}>
+              <Link href="/" onClick={closeElement}>
                 Zakažite online sastanak
               </Link>
             </li>
