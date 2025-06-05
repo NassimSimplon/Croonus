@@ -170,9 +170,10 @@
 .fullscreen-navbar ul li a {
   color: white;
   text-decoration: none;
-  font-size: var(--xl-font-size);
+  font-size: 4rem;
   transition: color 0.3s;
-  font-weight: 400;
+  font-weight: 200;
+  line-height: 4rem;
 }
 
 .fullscreen-navbar ul li a:hover {
@@ -193,8 +194,9 @@
 
 .nav-footer h4 {
   color: var(--primary-white);
-  font-size: 16px;
-  font-weight: 400 !important;
+  font-size: 22px;
+  font-weight: 300 ;
+  line-height: 30px;
 }
 
 .nav-footer-title {
