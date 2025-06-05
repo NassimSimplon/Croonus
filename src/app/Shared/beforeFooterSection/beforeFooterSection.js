@@ -1,5 +1,6 @@
 "use client";
 import "./beforeFooterSection.css";
+import Link from "next/link";
 import React from "react";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 
@@ -27,9 +28,10 @@ const BeforeFooterSection = () => {
         ref={setRef("beforeFooterSection_btns")}
         data-scroll-id="beforeFooterSection_btns"
       >
-        <button className="beforeFooterSection_first_btn">
+         <Link href="/Form"   className="beforeFooterSection_first_btn">
+        <button  >
           Pošaljite upit
-        </button>
+        </button></Link>
         <button className="beforeFooterSection_second_btn">
           Zakažite online sastanak
         </button>

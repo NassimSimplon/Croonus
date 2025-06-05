@@ -1,5 +1,6 @@
 "use client";
 import "./videoSection.css";
+import Link from "next/link";
 import PlayIcon from "@/app/Icons/PlayIcon";
 import PropTypes from "prop-types";
 import React, { memo } from "react";
@@ -31,9 +32,9 @@ const VideoSection = ({ openElement }) => {
           da pronađu vaše proizvode.
         </p>
         <div className="btn-section">
-          <button className="first-btn" type="button">
+        <Link href="/Form" className="first_btn_link">  <button className="first-btn"  type="button">
             Pošaljite upit
-          </button>
+          </button></Link>
           <button className="second-btn" type="button" onClick={openElement}>
             <PlayIcon className="menu-icon" />
             Pogledajte priču

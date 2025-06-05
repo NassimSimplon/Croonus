@@ -32,6 +32,7 @@
 .beforeFooterSection_first_btn,
 .beforeFooterSection_second_btn {
     width             : 100%;
+        height: 45px;
     max-width         : 300px;
     padding-block     : 13px;
     font-size         : var(--btns-font-size);
@@ -42,6 +43,18 @@
     -moz-transition   : all 0.2s ease-in-out;
     -ms-transition    : all 0.2s ease-in-out;
     -o-transition     : all 0.2s ease-in-out;
+
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+.beforeFooterSection_first_btn button{
+ width: 100% ;
+ height: fit-content;
+    background:transparent;
+    font-size         : var(--btns-font-size);
+    border-radius     : 8px;
+    color             : var(--primary-white);
 }
 
 .beforeFooterSection_first_btn {

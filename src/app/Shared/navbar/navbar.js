@@ -95,7 +95,7 @@ const Navbar = () => {
               </Link>
             </li>
             <li>
-              <Link href="/" onClick={closeElement}>
+              <Link href="/Form" onClick={closeElement}>
                 Pošaljite upit
               </Link>
             </li>
