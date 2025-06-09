@@ -66,5 +66,25 @@
 @media (min-width: 220px) and (max-width: 768px) {
     .service_card {
         max-width: 100%;
+        padding: 15px 15px 25px 15px;
+        border-radius: 10px;
+
+     
     }
+
+}
+@media (min-width: 220px) and (max-width: 480px) {
+ 
+       .service-card__title{
+        text-align: left;
+        font-size : 22px;
+        margin: 0;
+    }
+    .service-card__description {
+        font-size: 17px;
+        margin-top: 17px;
+    }
+
+
+
 }

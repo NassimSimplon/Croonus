@@ -55,3 +55,27 @@
         grid-template-columns: 1fr;
     }
 }
+
+@media (min-width: 220px) and (max-width: 480px) {
+    .service-section {
+        width     : 100%;
+        max-width : 100%;
+        margin-top: 100px;
+    }
+    .service-cards {
+margin-top: 50px;
+    }
+
+    .service-section-title {
+        text-align: left;
+        font-size:30px
+   
+    }
+       .service-card__title{
+        text-align: left;
+        font-size : 22px;
+    }
+
+
+
+}

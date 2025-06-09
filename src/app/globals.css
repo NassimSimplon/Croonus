@@ -221,3 +221,34 @@ picture {
     opacity: 1;
   }
 }
+
+ .scroller-wrapper,
+ .scroll-container {
+  width : 100%;
+  height: fit-content;
+}
+
+
+  .scroll-container {
+    overflow                  : hidden;
+    scroll-behavior           : smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+   .scroll-button {
+    display              : flex;
+    justify-content      : center;
+    align-items          : center;
+    background-color     : var(--primary-white);
+    border               : solid 1px var(--border-color);
+    width                : 53px;
+    height               : 53px;
+    cursor               : pointer;
+    z-index              : 1;
+    
+    transition           : opacity 0.3s;
+    border-radius        : 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius   : 50%;
+    -ms-border-radius    : 50%;
+    -o-border-radius     : 50%;
+  }

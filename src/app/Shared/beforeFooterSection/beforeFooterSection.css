@@ -86,12 +86,20 @@
     .beforeFooterSection {
         margin: 50px auto 0 auto;
     }
+ 
 
     .beforeFooterSection__title {
-        font-size: calc(var(--title-size) - 10px);
+        font-size: 30px;
+        text-align:left
     }
 
     .beforeFooterSection_btns {
         flex-direction: column;
+            padding-inline: 0;
     }
+    .beforeFooterSection_first_btn,.beforeFooterSection_second_btn{
+        width: 100%;
+        max-width:100%
+    }
+  
 }

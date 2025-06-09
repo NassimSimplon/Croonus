@@ -213,3 +213,38 @@ width: 100% ;
     height         : fit-content;
   }
 }
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .testimonialSection{
+    margin-top: 100px;
+  }
+  .testimonialSection__title{
+font-size: 30px;
+margin-bottom: 60px;
+  }
+  .testimonial-text{
+     display: -webkit-box;
+  -webkit-line-clamp: 5; /* change to 2 or 4 as needed */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  }
+  .testimonial-wrapper{
+    display: flex;
+    align-items:center;
+    gap: 20px;
+    
+  }
+  .testimonial-footer-controls{
+    width: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items:center;
+    gap: 13px;
+  }
+  .scroll-button-left{
+margin-left: 0;
+  }
+  .testimonial-counter{
+    font-size: 17px;
+  }
+}

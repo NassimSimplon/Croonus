@@ -1,5 +1,6 @@
 "use client";
 import "./BlogCard.css";
+import Link from "next/link";
 import MoreOptionsIcon from "@/app/Icons/MoreOptionsIcon";
 import PropTypes from "prop-types";
 import React, { memo } from "react";
@@ -33,7 +34,7 @@ const BlogCard = ({ id, src, alt, title, type }) => {
       </div>
       <div className="blog_card_content">
         <h1 className="blog_card_title">{title}</h1>
-                <MoreOptionsIcon className='blog_card_more_icon' />
+             <Link href={`/blog/${id}`}  > <MoreOptionsIcon className='blog_card_more_icon' /></Link>
       </div>
     </div>
   );

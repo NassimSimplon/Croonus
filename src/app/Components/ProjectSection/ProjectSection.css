@@ -4,7 +4,7 @@
   margin-top   : 200px;
   max-width    : 1500px;
   margin-inline: auto;
-  padding-left : 30px;
+  padding-inline : 30px;
 }
 
 .project-section_title {
@@ -23,11 +23,7 @@
   display: none;
 }
 
-.project-section .scroller-wrapper,
-.project-section .scroll-container {
-  width : 100%;
-  height: fit-content;
-}
+ 
 
 .project-section .scroll-content {
   width                : 100%;
@@ -133,6 +129,7 @@ box-shadow: -1px -9px 29px 20px rgba(11,27,31,0.31);
 @media (min-width: 280px) and (max-width: 1220px) {
   .project-section {
     margin-top: 100px;
+    padding-right: 0;
   }
 
   .project-section .scroller-wrapper {
@@ -236,4 +233,15 @@ box-shadow: -1px -9px 29px 20px rgba(11,27,31,0.31);
   .project-section .project-card__image {
     min-width: 300px;
   }
+  .project-section_title {
+  font-size  : 30px;
+  text-align: left;
+ 
+}
+.project-section .scroll-content{
+margin-top: 60px;
+}
+.project-section-footer {
+  margin-top: 0 !important;
+}
 }

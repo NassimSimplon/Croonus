@@ -56,12 +56,17 @@
   border-radius   : 8px;
 }
 
-.app_footer_services_txt {
+.app_footer_services_txt  {
   color      : var(--primary-black);
   font-size  : var(--responsive-sub-title-size);
   font-weight: 400;
 }
-.app_footer_services_txt:hover {
+.app_footer_services_txt a {
+  color      : var(--primary-black);
+  font-size  : var(--responsive-sub-title-size);
+  font-weight: 400;
+}
+.app_footer_services_txt a:hover {
    text-decoration: underline;
 }
 
@@ -138,10 +143,7 @@
   .app_footer_services_txt {
     margin: 0;
   }
-}
-
-@media (min-width: 280px) and (max-width: 785px) {
-  .app-footer {
+    .app-footer {
     width    : 100%;
     max-width: 100%;
     margin   : 50px auto 0 auto;
@@ -164,4 +166,66 @@
     border-right  : solid 1px var(--primary-white);
     padding-inline: 20px;
   }
+}
+
+@media (min-width: 280px) and (max-width: 480px) {
+  .app-footer_contact,.app-footer_social{
+padding-inline: 0;
+border:none
+  }
+      .app-footer_body{
+        flex-direction: column-reverse;
+        gap: 0;
+        align-items:flex-start;
+        padding-bottom: 0;
+        padding-top: 23px;
+    }
+    .app-footer_social{
+padding-bottom: 22px;
+position: relative;
+    }
+    .app-footer_social::after{
+      content:'';
+   
+      position: absolute;
+      bottom:0;
+      left: 0;
+      width: 10%;
+      height: 1px;
+      background-color:var(--primary-white)
+    }
+.app-footer_logo {
+  height: 151px; 
+}
+.app-footer_contact{
+  margin-top: 18px;
+}
+
+.app_footer_services{
+  display: grid;grid-template-columns: 1fr 54px;
+padding: 0;
+  background-color:transparent;
+  gap: 5px;
+}
+.app_footer_services_txt{
+  font-size: 14px;
+}
+.app_footer_services_txt,.app_footer_services_btn{
+   border-radius   : 8px;
+   background-color:var(--primary-white);
+     padding:14px 13px;
+     height: 100%;
+
+    min-height: 82px;
+}
+.app_footer_services_btn{
+  flex-direction: column-reverse;
+    padding:14px 7px;
+    font-size: 13px;
+ 
+    justify-content: center;
+    align-items:center;
+    text-align: center;
+}
+
 }

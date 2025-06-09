@@ -116,3 +116,25 @@
         grid-column: 1/3;
     }
 }
+
+@media (min-width: 280px) and (max-width: 480px) {
+   
+.client-card, .client-last-card  {
+padding: 16px 11px;
+height: 94px;
+border-width: 2px;
+}
+    .client-section-title {
+        font-size: 30px;
+        text-align: left;
+    }
+.client-footer-bold-txt, .client-footer-txt-underline, .client-last-card_title{
+font-size: 17px;
+
+}
+.client-last-card{
+            height: 94px;
+            box-sizing : border-box
+}
+   
+}
