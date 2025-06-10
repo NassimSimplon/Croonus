@@ -3,7 +3,7 @@ import "./ProjectSection.css";
 import ArrowIcon from "@/app/Icons/ArrowIcon";
 import Link from "next/link";
 import ProjectCard from "../Cards/ProjectCard/ProjectCard";
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 import { useHorizontalScroll } from "@/app/CustomHooks/useHorizontalScroll";
 import { projectList } from "@/app/data/projectData";
@@ -13,9 +13,41 @@ const ProjectSection = () => {
     useHorizontalScroll(316);
   const { setRef, isInView } = useMultiScrollReveal(0.9);
   const [fade, setFade] = useState(true);
-useEffect(() => {
-  setFade(window.innerWidth > 1220);
-}, []);
+  const [isMobile, setIsMobile] = useState(false);
+  const [touchStart, setTouchStart] = useState(0);
+  const [touchEnd, setTouchEnd] = useState(0);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setFade(window.innerWidth > 1220);
+      setIsMobile(window.innerWidth < 480);
+    };
+    
+    handleResize(); // Initialize
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const handleTouchStart = useCallback((e) => {
+    setTouchStart(e.targetTouches[0].clientX);
+  }, []);
+
+  const handleTouchMove = useCallback((e) => {
+    setTouchEnd(e.targetTouches[0].clientX);
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
+    if (touchStart - touchEnd > 50) {
+      // Swipe left
+      scroll("right");
+    }
+
+    if (touchStart - touchEnd < -50) {
+      // Swipe right
+      scroll("left");
+    }
+  }, [touchStart, touchEnd, scroll]);
+
   return (
     <section className="project-section">
       <h1
@@ -30,16 +62,24 @@ useEffect(() => {
         Naši projekti<span>.</span>
       </h1>
       <div className="scroller-wrapper">
-        <button
-          className="scroll-button left"
-          onClick={() => scroll("left")}
-          disabled={!canScrollLeft}
-          aria-label="Scroll Left"
-        >
-          <ArrowIcon className="left-arrow" />
-        </button>
+        {!isMobile && (
+          <button
+            className="scroll-button left"
+            onClick={() => scroll("left")}
+            disabled={!canScrollLeft}
+            aria-label="Scroll Left"
+          >
+            <ArrowIcon className="left-arrow" />
+          </button>
+        )}
 
-        <div className="scroll-container" ref={containerRef}>
+        <div 
+          className="scroll-container" 
+          ref={containerRef}
+          onTouchStart={isMobile ? handleTouchStart : null}
+          onTouchMove={isMobile ? handleTouchMove : null}
+          onTouchEnd={isMobile ? handleTouchEnd : null}
+        >
           <div className="scroll-content">
             {projectList.map((project) => (
               <ProjectCard
@@ -52,14 +92,17 @@ useEffect(() => {
             ))}
           </div>
         </div>
-        <button
-          className="scroll-button right"
-          onClick={() => scroll("right")}
-          disabled={!canScrollRight}
-          aria-label="Scroll Right"
-        >
-          <ArrowIcon />
-        </button>
+
+        {!isMobile && (
+          <button
+            className="scroll-button right"
+            onClick={() => scroll("right")}
+            disabled={!canScrollRight}
+            aria-label="Scroll Right"
+          >
+            <ArrowIcon />
+          </button>
+        )}
       </div>
       <Link href="/Projects">
         <p

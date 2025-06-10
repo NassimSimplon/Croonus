@@ -1,10 +1,10 @@
 import "./ClientSection.css";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 
-const clientsList = [
+const clientsList   = [
   { id: 1, src: "/images/1.png", type: "png", alt: "Croonus client 1" },
   { id: 2, src: "/images/2.png", type: "png", alt: "Croonus client 2" },
   { id: 3, src: "/images/3.png", type: "png", alt: "Croonus client 3" },
@@ -34,6 +34,21 @@ const clientsList = [
 
 const ClientSection = () => {
   const { setRef, isInView } = useMultiScrollReveal(0.9);
+  const [displayedClients, setDisplayedClients] = useState(clientsList);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDisplayedClients(
+        window.innerWidth <= 480 ? [...clientsList].slice(0, 9) : clientsList
+      );
+    };
+
+    // Initialize and add event listener
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const titleId = "client-section-title";
   const titleClass = isInView(titleId)
@@ -51,7 +66,7 @@ const ClientSection = () => {
       </h1>
 
       <div className="clientList">
-        {clientsList.map((client) => {
+        {displayedClients.map((client) => {
           const cardId = `client-card_${client.id}`;
           const visibilityClass = isInView(cardId)
             ? "fade-up-element"
@@ -92,10 +107,11 @@ const ClientSection = () => {
         <p className="client-footer-bold-txt">
           ...i još <span>250</span> klijenata.
         </p>
-     <Link href="/Clients">  <p className="client-footer-txt-underline">Pogledajte sve klijente</p></Link> 
+        <Link href="/Clients">
+          <p className="client-footer-txt-underline">Pogledajte sve klijente</p>
+        </Link> 
       </div>
     </section>
   );
 };
-
 export default ClientSection;
