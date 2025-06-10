@@ -328,6 +328,7 @@
     place-items: flex-start;
     height: fit-content;
     padding-inline: 15px;
+        padding-block: 20px;
   }
   .about-card_6 .about-card__image-wrapper,
   .about-card_7 .about-card__image-wrapper {
@@ -340,6 +341,7 @@
   .about-card_7 {
     grid-row: 7 /8;
     padding-inline: 15px;
+    padding-block: 20px;
 
     place-items: flex-start;
   }
