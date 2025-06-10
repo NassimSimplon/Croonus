@@ -95,6 +95,7 @@
   -ms-transition: height 0.5s ease;
   -o-transition: height 0.5s ease;
   place-items: center;
+  overflow-y:auto
 }
 
 .fullscreen-navbar.open {
@@ -153,6 +154,7 @@
   flex-direction: column;
   justify-content: center;
   box-sizing: border-box;
+  padding-bottom:15px;
 }
 
 .fullscreen-navbar ul {
