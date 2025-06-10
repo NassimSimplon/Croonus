@@ -154,7 +154,6 @@ const TestimonialSection = () => {
 
   useEffect(() => {
     const updateItemsPerPage = () => {
-      console.log(containerRef.current, "containerRef.current");
       if (window.innerWidth <= 1024) {
         setItemsPerPage(1);
         setCurrent(1);
