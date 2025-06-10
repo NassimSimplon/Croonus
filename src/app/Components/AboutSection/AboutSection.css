@@ -111,12 +111,12 @@
     height: 100%;
     grid-template-rows:
       204px
-      151px
+      minmax(151px, auto)
       204px
       minmax(177px, auto)
       204px
       1fr
-      177px;
+         minmax(177px, auto);
     box-sizing: content-box;
     gap: 25px 25px;
     margin-top: 28px;
