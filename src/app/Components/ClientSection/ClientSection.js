@@ -43,7 +43,7 @@ const ClientSection = () => {
       );
     };
 
-    // Initialize and add event listener
+  
     handleResize();
     window.addEventListener('resize', handleResize);
 

@@ -23,7 +23,7 @@ const ProjectSection = () => {
       setIsMobile(window.innerWidth < 480);
     };
     
-    handleResize(); // Initialize
+    handleResize();  
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -38,12 +38,10 @@ const ProjectSection = () => {
 
   const handleTouchEnd = useCallback(() => {
     if (touchStart - touchEnd > 50) {
-      // Swipe left
       scroll("right");
     }
 
     if (touchStart - touchEnd < -50) {
-      // Swipe right
       scroll("left");
     }
   }, [touchStart, touchEnd, scroll]);

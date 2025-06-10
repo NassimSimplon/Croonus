@@ -83,4 +83,7 @@
     max-width: 100%;
     grid-template-columns: 1fr;
   }
+  .project_title_section .about-section__title{
+padding-inline:30px;
+  }
 }
