@@ -98,8 +98,7 @@
 }
 
 .fullscreen-navbar.open {
-  height: 100vh;  
- 
+  height: 100vh;
 }
 
 .bg-image-section {
@@ -149,12 +148,11 @@
 }
 .nav-list {
   width: 100%;
-  height:fit-content;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   justify-content: center;
-    box-sizing: border-box;
-
+  box-sizing: border-box;
 }
 
 .fullscreen-navbar ul {
@@ -199,7 +197,7 @@
 .nav-footer h4 {
   color: var(--primary-white);
   font-size: 22px;
-  font-weight: 300 ;
+  font-weight: 300;
   line-height: 30px;
 }
 
@@ -241,20 +239,23 @@
 
 @media (min-width: 200px) and (max-width: 480px) {
   .navbar {
-    padding: 30px 20px 0 20px;
+    padding: 57px 20px 0 20px;
   }
 
   .logo {
-    width: 120px;
+    width: 161.004px;
   }
 
   .menu {
     gap: 10px;
   }
-
+  .link {
+    font-size: 16px;
+    font-weight: 400;
+  }
   .menu-icon {
-    width: 30px;
-    height: 30px;
+    width: 37px;
+    height: 37px;
   }
 
   .fullscreen-navbar {

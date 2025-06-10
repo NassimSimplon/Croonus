@@ -32,9 +32,12 @@ const VideoSection = ({ openElement }) => {
           da pronađu vaše proizvode.
         </p>
         <div className="btn-section">
-        <Link href="/Form" className="first_btn_link">  <button className="first-btn"  type="button">
-            Pošaljite upit
-          </button></Link>
+          <Link href="/Form" className="first_btn_link">
+            {" "}
+            <button className="first-btn" type="button">
+              Pošaljite upit
+            </button>
+          </Link>
           <button className="second-btn" type="button" onClick={openElement}>
             <PlayIcon className="menu-icon" />
             Pogledajte priču

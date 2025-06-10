@@ -1,90 +1,82 @@
 .service_card {
-    width: 100%;
-    max-width: 490px;
-    height: 100%;
-    min-height: 100px;
-    border-radius: 29px;
-    -webkit-border-radius: 29px;
-    -moz-border-radius: 29px;
-    -ms-border-radius: 29px;
-    -o-border-radius: 29px;
-    padding: 30px 40px;
-    overflow: hidden;
-    position: relative;
-    transition: all 0.5s ease;
-    z-index: 0;
+  width: 100%;
+  max-width: 490px;
+  height: 100%;
+  min-height: 100px;
+  border-radius: 29px;
+  -webkit-border-radius: 29px;
+  -moz-border-radius: 29px;
+  -ms-border-radius: 29px;
+  -o-border-radius: 29px;
+  padding: 30px 40px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.5s ease;
+  z-index: 0;
 }
- 
+
 .service-card__title {
-    font-size  : calc(var(--title-size) - 15px);
-    color      : var(--primary-white);
-    font-weight: 700;
+  font-size: calc(var(--title-size) - 15px);
+  color: var(--primary-white);
+  font-weight: 700;
 }
 
 .service-card__title span {
-    color      : var(--primary-green);
-    font-size  : var(--title-size);
-
+  color: var(--primary-green);
+  font-size: var(--title-size);
 }
 
 .service-card__description {
-    font-size  : var(--sub-title-size);
-    color      : var(--primary-white);
-    margin-top : 30px;
-    font-weight: 300;
+  font-size: var(--sub-title-size);
+  color: var(--primary-white);
+  margin-top: 30px;
+  font-weight: 300;
 }
 
 .service-card_1 {
-    background-color: var(--primary-purple);
+  background-color: var(--primary-purple);
 }
 
 .service-card_2 {
-    background-color: var(--secondary-green);
+  background-color: var(--secondary-green);
 }
 
 .service-card_3 {
-    background-color: var(--primary-pink);
+  background-color: var(--primary-pink);
 }
 
 .service-card_4 {
-    background-color: var(--third-green);
+  background-color: var(--third-green);
 }
 
 .service-card_5 {
-    background-color: var(--primary-yellow);
+  background-color: var(--primary-yellow);
 }
 
 .service-card_6 {
-    background-color: var(--secondary-blue);
+  background-color: var(--secondary-blue);
 }
 
 .service-card_5 .service-card__title,
 .service-card_5 .service-card__description {
-    color: var(--primary-black);
+  color: var(--primary-black);
 }
 
 @media (min-width: 220px) and (max-width: 768px) {
-    .service_card {
-        max-width: 100%;
-        padding: 15px 15px 25px 15px;
-        border-radius: 10px;
-
-     
-    }
-
+  .service_card {
+    max-width: 100%;
+    padding: 15px 15px 25px 15px;
+    border-radius: 10px;
+  }
 }
 @media (min-width: 220px) and (max-width: 480px) {
- 
-       .service-card__title{
-        text-align: left;
-        font-size : 22px;
-        margin: 0;
-    }
-    .service-card__description {
-        font-size: 17px;
-        margin-top: 17px;
-    }
-
-
-
+  .service-card__title {
+    text-align: left;
+    font-size: 22px;
+    margin: 0;
+  }
+  .service-card__description {
+    font-size: 17px;
+    margin-top: 17px;
+  }
 }

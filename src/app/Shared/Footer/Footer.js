@@ -10,7 +10,7 @@ function Footer() {
       <div className="app-footer">
         <div className="app-footer_wrapper">
           <div className="app-footer_body">
-            <Link href="/">
+            <Link href="/" className="footer_linked_logo">
            
               <svg     className="app-footer_logo" xmlns="http://www.w3.org/2000/svg" width="251" height="71" viewBox="0 0 251 71" fill="none">
   <path d="M22.7385 54.6118L21.0914 59.5496H20.3568L19.006 55.6065L17.6552 59.5496H16.8969L15.2498 54.6118H15.9726L17.2997 58.626L18.6861 54.6118H19.3378L20.7004 58.6378L22.0631 54.6118H22.7385Z" fill="white" />

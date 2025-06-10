@@ -1,140 +1,140 @@
 .client-section {
-    width         : 100%;
-    height        : fit-content;
-    margin-top    : 200px;
-    max-width     : 1500px;
-    margin-inline : auto;
-    padding-inline: 30px;
+  width: 100%;
+  height: fit-content;
+  margin-top: 200px;
+  max-width: 1500px;
+  margin-inline: auto;
+  padding-inline: 30px;
 }
 
 .client-section-title {
-    text-align : center;
-    font-size  : var(--title-size);
-    font-weight: 900;
-    color      : var(--primary-white);
+  text-align: center;
+  font-size: var(--title-size);
+  font-weight: 900;
+  color: var(--primary-white);
 }
 
 .client-section-title span {
-    color      : var(--primary-green);
-    font-size  : var(--title-size);
-    font-weight: 900;
+  color: var(--primary-green);
+  font-size: var(--title-size);
+  font-weight: 900;
 }
 
 .clientList {
-    width                : 100%;
-    margin-inline        : auto;
-    display              : grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap                  : 25px;
-    margin-top           : 5rem;
+  width: 100%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 25px;
+  margin-top: 5rem;
 }
 
 .client-card {
-    width             : 100%;
-    height            : 123px;
-    border            : solid 1px var(--border-color);
-    padding           : 20px;
-   
+  width: 100%;
+  height: 123px;
+  border: solid 1px var(--border-color);
+  padding: 20px;
 }
 
 .client-image {
-    width     : 100%;
-    height    : 100%;
-    object-fit: contain;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 }
 
 .client-last-card {
-    width             : 100%;
-    padding           : 20px;
-    background-color  : var(--primary-blue);
-    display           : flex;
-    justify-content   : center;
-    align-items       : center;
+  width: 100%;
+  padding: 20px;
+  background-color: var(--primary-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .client-last-card_title {
-    font-size  : var(--sub-title-size);
-    color      : var(--primary-white);
-    font-weight: 400;
+  font-size: var(--sub-title-size);
+  color: var(--primary-white);
+  font-weight: 400;
 }
 
 .client-footer {
-    margin-top: 62px;
+  margin-top: 62px;
 }
 
 .client-footer-bold-txt,
 .client-footer-txt-underline {
-    font-size  : var(--sub-title-size);
-    font-weight: 300;
-    color      : var(--primary-white);
-    text-align : center;
-    margin     : 0;
+  font-size: var(--sub-title-size);
+  font-weight: 300;
+  color: var(--primary-white);
+  text-align: center;
+  margin: 0;
 }
 
 .client-footer-bold-txt span {
-    font-weight: 700;
+  font-weight: 700;
 }
 
 .client-footer-txt-underline {
-    margin-top     : 10px;
-    text-decoration: underline;
+  margin-top: 10px;
+  text-decoration: underline;
 }
 
 /* media Query */
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .client-section {
-        margin-top: 100px;
-    }
+  .client-section {
+    margin-top: 100px;
+  }
 
-    .clientList {
-        grid-template-columns: repeat(4, 1fr);
+  .clientList {
+    grid-template-columns: repeat(4, 1fr);
 
-        margin-top: 50px;
-    }
+    margin-top: 50px;
+  }
 
-    .client-last-card {
-        grid-column: 1/5;
-    }
+  .client-last-card {
+    grid-column: 1/5;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 769px) {
-    .client-section {
-        margin-top: 50px;
-    }
+  .client-section {
+    margin-top: 50px;
+  }
 
-    .client-section-title {
-        font-size: calc(var(--title-size) - 10px);
-    }
+  .client-section-title {
+    font-size: calc(var(--title-size) - 10px);
+  }
 
-    .clientList {
-        grid-template-columns: repeat(2, 1fr);
-        margin-top           : 50px;
-    }
+  .clientList {
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 50px;
+  }
 
-    .client-last-card {
-        grid-column: 1/3;
-    }
+  .client-last-card {
+    grid-column: 1/3;
+  }
 }
 
 @media (min-width: 280px) and (max-width: 480px) {
-   
-.client-card, .client-last-card  {
-padding: 16px 11px;
-height: 94px;
-border-width: 2px;
-}
-    .client-section-title {
-        font-size: 30px;
-        text-align: left;
-    }
-.client-footer-bold-txt, .client-footer-txt-underline, .client-last-card_title{
-font-size: 17px;
-
-}
-.client-last-card{
-            height: 94px;
-            box-sizing : border-box
-}
-   
+  .client-card,
+  .client-last-card {
+    padding: 16px 11px;
+    height: 94px;
+    border-width: 2px;
+  }
+  .client-section-title {
+    font-size: 30px;
+    text-align: left;
+  }
+  .client-footer-bold-txt,
+  .client-footer-txt-underline,
+  .client-last-card_title {
+    font-size: 17px;
+  }
+  .client-last-card {
+    height: 94px;
+    box-sizing: border-box;
+    grid-column: 1/2;
+  }
 }
