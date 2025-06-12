@@ -78,17 +78,27 @@
 @media (min-width: 220px) and (max-width: 768px) {
   .blog_page_video,
   .blog_page_video .VideoSection {
-    max-height: 260px !important;
+    max-height: 260px ;
   }
 
   .blog_page_card_section {
     width: 100%;
     max-width: 100%;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (min-width: 220px) and (max-width: 768px) {
     .blog_page_card_section ,.blog_title_section .about-section__title {
 padding-inline: 19px;
+  }
+}
+@media (min-width: 220px) and (max-width: 480px) {
+  .blog_page_video,
+  .blog_page_video .VideoSection {
+    max-height: 220px !important;
+  }
+    .blog_page_card_section {
+ 
+    grid-template-columns: 1fr;
   }
 }
