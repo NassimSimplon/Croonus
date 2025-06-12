@@ -73,32 +73,20 @@ const Navbar = () => {
         </button>
         <div className="bg-image-section"></div>
         <div className="nav-list">
-          <ul>
-            <li>
-              <Link href="/Projects" onClick={closeElement}>
-                Projekti
-              </Link>
-            </li>
-            <li>
-              <Link href="/Clients" onClick={closeElement}>
-                Reference
-              </Link>
-            </li>
-            <li>
-              <Link href="/blog" onClick={closeElement}>
-                Blog
-              </Link>
-            </li>
-            <li>
-              <Link href="/" onClick={closeElement}>
-                Zakažite online sastanak
-              </Link>
-            </li>
-            <li>
-              <Link href="/" onClick={closeElement}>
-                Pošaljite upit
-              </Link>
-            </li>
+             <ul>
+            {[
+              { href: "/Projects", text: "Projekti" },
+              { href: "/Clients", text: "Reference" },
+              { href: "/blog", text: "Blog" },
+              { href: "/", text: "Zakažite online sastanak" },
+              { href: "/", text: "Pošaljite upit" }
+            ].map((item) => (
+              <li key={item.text}>
+                <Link href={item.href} onClick={closeElement}>
+                  {item.text}
+                </Link>
+              </li>
+            ))}
           </ul>
           <div className="nav-footer">
             <h4 className="nav-footer-title">Podrška</h4>
