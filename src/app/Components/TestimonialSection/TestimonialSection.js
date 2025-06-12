@@ -1,15 +1,10 @@
 "use client";
 import "./TestimonialSection.css";
 import ArrowIcon from "@/app/Icons/ArrowIcon";
+import React, { useEffect, useRef, useState } from "react";
 import TestimonialCard from "../Cards/TestimonialCard";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 import { useHorizontalScroll } from "@/app/CustomHooks/useHorizontalScroll";
-
-import React, {
-  useEffect,
-  useRef,
-  useState,
-} from "react";
 
 const testimonialList = [
   {
@@ -187,10 +182,11 @@ const TestimonialSection = () => {
   return (
     <section className="testimonialSection">
       <h1
-        className={`testimonialSection__title ${isInView("testimonialSection__title")
-          ? "fade-up-element"
-          : "hidden-element"
-          }`}
+        className={`testimonialSection__title ${
+          isInView("testimonialSection__title")
+            ? "fade-up-element"
+            : "hidden-element"
+        }`}
         ref={setRef("testimonialSection__title")}
         data-scroll-id="testimonialSection__title"
       >
@@ -198,8 +194,9 @@ const TestimonialSection = () => {
       </h1>
 
       <div
-        className={`testimonial-wrapper ${isInView(`testimonial-wrapper`) ? "opacity" : "hidden-element"
-          }`}
+        className={`testimonial-wrapper ${
+          isInView(`testimonial-wrapper`) ? "opacity" : "hidden-element"
+        }`}
         ref={setRef("testimonial-wrapper")}
         data-scroll-id={`testimonial-wrapper`}
       >
@@ -211,7 +208,7 @@ const TestimonialSection = () => {
             ref={widthRef}
           >
             {testimonialList.map((item) => (
-              <TestimonialCard key={item.id} {...item}  />
+              <TestimonialCard key={item.id} {...item} />
             ))}
           </div>
         </div>

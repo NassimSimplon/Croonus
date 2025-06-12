@@ -1,6 +1,5 @@
-    const FooterIcon = (props) => (
+const FooterIcon = (props) => (
   <svg
-   
     xmlns="http://www.w3.org/2000/svg"
     version="1.1"
     viewBox="0 0 8.22 7.09"

@@ -3,13 +3,12 @@ import PropTypes from "prop-types";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import { memo } from "react";
 
-const TestimonialCard = ({ src, alt, testimony, name, position, type  }) => {
+const TestimonialCard = ({ src, alt, testimony, name, position, type }) => {
   return (
-    <div className="testimonial-card"  
->
+    <div className="testimonial-card">
       <div className="testimonial-image-wrapper">
         <ResponsiveImage
-          width="100" 
+          width="100"
           height="100"
           webpSrc={src}
           fallbackSrc={src}
@@ -37,7 +36,6 @@ TestimonialCard.propTypes = {
   name: PropTypes.string.isRequired,
   position: PropTypes.string.isRequired,
   type: PropTypes.any.isRequired,
-  
 };
 
 export default memo(TestimonialCard);

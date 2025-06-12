@@ -1,10 +1,5 @@
 const SVGComponent = (props) => (
-  <svg
- 
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 28.35 7.09"
-    {...props}
-  >
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 28.35 7.09" {...props}>
     <defs>
       <style>
         {
@@ -66,5 +61,5 @@ const SVGComponent = (props) => (
     </g>
   </svg>
 );
- 
-export default SVGComponent
+
+export default SVGComponent;

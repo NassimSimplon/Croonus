@@ -28,10 +28,9 @@ const BeforeFooterSection = () => {
         ref={setRef("beforeFooterSection_btns")}
         data-scroll-id="beforeFooterSection_btns"
       >
-         <Link href="/Form"   className="beforeFooterSection_first_btn">
-        <button  >
-          Pošaljite upit
-        </button></Link>
+        <Link href="/Form" className="beforeFooterSection_first_btn">
+          <button>Pošaljite upit</button>
+        </Link>
         <button className="beforeFooterSection_second_btn">
           Zakažite online sastanak
         </button>

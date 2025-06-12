@@ -4,7 +4,7 @@ import React, { useEffect, useState } from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
 
-const clientsList   = [
+const clientsList = [
   { id: 1, src: "/images/1.png", type: "png", alt: "Croonus client 1" },
   { id: 2, src: "/images/2.png", type: "png", alt: "Croonus client 2" },
   { id: 3, src: "/images/3.png", type: "png", alt: "Croonus client 3" },
@@ -31,7 +31,6 @@ const clientsList   = [
   { id: 24, src: "/images/24.png", type: "png", alt: "Croonus client 24" },
 ];
 
-
 const ClientSection = () => {
   const { setRef, isInView } = useMultiScrollReveal(0.9);
   const [displayedClients, setDisplayedClients] = useState(clientsList);
@@ -43,17 +42,14 @@ const ClientSection = () => {
       );
     };
 
-  
     handleResize();
-    window.addEventListener('resize', handleResize);
+    window.addEventListener("resize", handleResize);
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const titleId = "client-section-title";
-  const titleClass = isInView(titleId)
-    ? "fade-up-element"
-    : "hidden-element";
+  const titleClass = isInView(titleId) ? "fade-up-element" : "hidden-element";
 
   return (
     <section className="client-section">
@@ -98,18 +94,18 @@ const ClientSection = () => {
         </div>
       </div>
       <div
-        className={`client-footer ${isInView("client-footer")
-          ? "fade-up-element"
-          : "hidden-element"
-          }`}
+        className={`client-footer ${
+          isInView("client-footer") ? "fade-up-element" : "hidden-element"
+        }`}
         ref={setRef("client-footer")}
-        data-scroll-id="client-footer">
+        data-scroll-id="client-footer"
+      >
         <p className="client-footer-bold-txt">
           ...i još <span>250</span> klijenata.
         </p>
         <Link href="/Clients">
           <p className="client-footer-txt-underline">Pogledajte sve klijente</p>
-        </Link> 
+        </Link>
       </div>
     </section>
   );

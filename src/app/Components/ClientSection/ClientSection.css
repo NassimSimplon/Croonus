@@ -99,7 +99,7 @@
 
 @media (min-width: 320px) and (max-width: 769px) {
   .client-section {
-    margin-top: 50px;
+    margin-top: 100px;
   }
 
   .client-section-title {
@@ -108,7 +108,7 @@
 
   .clientList {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 50px;
+    margin-top: 60px;
   }
 
   .client-last-card {
@@ -117,6 +117,10 @@
 }
 
 @media (min-width: 280px) and (max-width: 480px) {
+  .client-card{
+  border: 1px solid rgba(255, 255, 255, 0.3);  
+
+  }
   .client-card,
   .client-last-card {
     padding: 16px 11px;
@@ -126,6 +130,9 @@
   .client-section-title {
     font-size: 30px;
     text-align: left;
+  }
+  .client-footer{
+margin-top: 40px;
   }
   .client-footer-bold-txt,
   .client-footer-txt-underline,

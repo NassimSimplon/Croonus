@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+import React from "react";
+
 const LinkIcon = ({ color = "#000000", ...props }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -22,5 +25,17 @@ const LinkIcon = ({ color = "#000000", ...props }) => (
     </g>
   </svg>
 );
+
+LinkIcon.propTypes = {
+  color: PropTypes.string,
+  props: PropTypes.objectOf(
+    PropTypes.oneOfType([PropTypes.string, PropTypes.number, PropTypes.bool])
+  ),
+};
+
+LinkIcon.defaultProps = {
+  color: "#000000",
+  props: {},
+};
 
 export default LinkIcon;

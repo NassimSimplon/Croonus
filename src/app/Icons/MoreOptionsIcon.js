@@ -1,3 +1,6 @@
+import PropTypes from "prop-types";
+import React from "react";
+
 const MoreOptionsIcon = ({ className }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
@@ -12,5 +15,12 @@ const MoreOptionsIcon = ({ className }) => (
     <path d="M336,200c-22.09,0-40,17.91-40,40s17.91,40,40,40,40-17.91,40-40c-.03-22.08-17.92-39.97-40-40ZM336,264c-13.25,0-24-10.75-24-24s10.75-24,24-24,24,10.75,24,24-10.75,24-24,24Z" />
   </svg>
 );
+MoreOptionsIcon.propTypes = {
+  className: PropTypes.string
+};
+
+MoreOptionsIcon.defaultProps = {
+  className: ''
+};
 
 export default MoreOptionsIcon;

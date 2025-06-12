@@ -90,11 +90,11 @@
   right: 200px;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 50px 80px;
-  border-radius: 29px;
-  -webkit-border-radius: 29px;
-  -moz-border-radius: 29px;
-  -ms-border-radius: 29px;
-  -o-border-radius: 29px;
+  border-radius: 15px;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  -ms-border-radius: 15px;
+  -o-border-radius: 15px;
   z-index: 4;
   display: flex;
   flex-direction: column;
@@ -252,26 +252,31 @@
 
 @media (min-width: 280px) and (max-width: 480px) {
   .video-container {
-    height: 57vh;
-    max-height: 550px;
+    height: 100vh;
+    max-height: 400px;
+  }
+  .video-background video {
+    width: 710px;
+    height: 450px;
   }
 
   .message-section {
-    width: calc(100% - 40px);
-    top: 85%;
+    width: 352px;
+    top: 0;
     left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 25px 14px;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    -o-transform: translate(-50%, -50%);
-    -moz-transform: translate(-50%, -50%);
-    height: 296px;
+    transform: translate(-50%, 283px);
+    padding: 25px 14px 34px 14px;
+    -webkit-transform: translate(-50%, 283px);
+    -ms-transform: translate(-50%, 283px);
+    -o-transform: translate(-50%, 283px);
+    -moz-transform: translate(-50%, 283px);
+    height: 284px;
   }
 
   .message-section .btn-section {
     width: 100%;
     flex-direction: column;
+    margin-top: 23px;
   }
 
   .message-section .title {
@@ -282,14 +287,5 @@
   .message-section .description {
     font-size: 18px;
     margin-bottom: 0;
-  }
-  .btn-section {
-    margin-top: 23px;
-  }
-}
-
-@media (max-height: 500px) and (max-width: 598px) {
-  .message-section {
-    top: 56%;
   }
 }

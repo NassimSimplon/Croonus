@@ -34,7 +34,10 @@ const BlogCard = ({ id, src, alt, title, type }) => {
       </div>
       <div className="blog_card_content">
         <h1 className="blog_card_title">{title}</h1>
-             <Link href={`/blog/${id}`}  > <MoreOptionsIcon className='blog_card_more_icon' /></Link>
+        <Link href={`/blog/${id}`}>
+          {" "}
+          <MoreOptionsIcon className="blog_card_more_icon" />
+        </Link>
       </div>
     </div>
   );

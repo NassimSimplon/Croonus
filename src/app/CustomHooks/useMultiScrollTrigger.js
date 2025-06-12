@@ -1,6 +1,5 @@
 import { useEffect, useRef, useState } from "react";
 
- 
 const getScrollParent = (element) => {
   if (!element) return null;
 
@@ -16,7 +15,6 @@ const getScrollParent = (element) => {
   return null;
 };
 
- 
 const handleEntry = (entry, observer, triggerOnce, setVisibleIds) => {
   const id = entry.target.dataset.scrollId;
   if (entry.isIntersecting && id) {
@@ -29,11 +27,18 @@ const handleEntry = (entry, observer, triggerOnce, setVisibleIds) => {
   }
 };
 
- 
-const createObserver = (elements, scrollContainer, threshold, triggerOnce, setVisibleIds) => {
+const createObserver = (
+  elements,
+  scrollContainer,
+  threshold,
+  triggerOnce,
+  setVisibleIds
+) => {
   const observer = new IntersectionObserver(
     (entries) => {
-      entries.forEach((entry) => handleEntry(entry, observer, triggerOnce, setVisibleIds));
+      entries.forEach((entry) =>
+        handleEntry(entry, observer, triggerOnce, setVisibleIds)
+      );
     },
     { threshold, root: scrollContainer }
   );
@@ -43,8 +48,8 @@ const createObserver = (elements, scrollContainer, threshold, triggerOnce, setVi
 };
 
 const useMultiScrollTrigger = (threshold = 0.1, triggerOnce = true) => {
-  const elementsRef = useRef(new Map());      
-  const observersRef = useRef(new Map());  
+  const elementsRef = useRef(new Map());
+  const observersRef = useRef(new Map());
   const [visibleIds, setVisibleIds] = useState(new Set());
 
   const setRef = (id) => (node) => {
@@ -56,7 +61,7 @@ const useMultiScrollTrigger = (threshold = 0.1, triggerOnce = true) => {
   };
 
   const setupObservers = () => {
-    const scrollGroups = new Map();  
+    const scrollGroups = new Map();
 
     elementsRef.current.forEach((el) => {
       const scrollParent = getScrollParent(el);
@@ -66,7 +71,13 @@ const useMultiScrollTrigger = (threshold = 0.1, triggerOnce = true) => {
     });
 
     scrollGroups.forEach((elements, scrollContainer) => {
-      const observer = createObserver(elements, scrollContainer, threshold, triggerOnce, setVisibleIds);
+      const observer = createObserver(
+        elements,
+        scrollContainer,
+        threshold,
+        triggerOnce,
+        setVisibleIds
+      );
       observersRef.current.set(scrollContainer, observer);
     });
   };

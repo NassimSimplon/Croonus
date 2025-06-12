@@ -14,11 +14,11 @@ const ResponsiveImage = ({
   className,
   lazyLoading,
   type,
-  showLoader
+  showLoader,
 }) => {
   const [isLoaded, setIsLoaded] = useState(false);
   const [hasError, setHasError] = useState(false);
-  
+
   const handleImageLoad = () => {
     setIsLoaded(true);
   };
@@ -30,7 +30,7 @@ const ResponsiveImage = ({
   return (
     <picture>
       <source srcSet={webpSrc} type={`image/${type}`} />
-      {(showLoader && (hasError || !isLoaded) )&& <CroonusSpiner />}
+      {showLoader && (hasError || !isLoaded) && <CroonusSpiner />}
       <Image
         src={fallbackSrc}
         alt={alt}
@@ -55,8 +55,7 @@ ResponsiveImage.propTypes = {
   className: PropTypes.string,
   lazyLoading: PropTypes.bool,
   type: PropTypes.string,
-  showLoader:PropTypes.bool
-
+  showLoader: PropTypes.bool,
 };
 
 ResponsiveImage.defaultProps = {
@@ -64,8 +63,7 @@ ResponsiveImage.defaultProps = {
   height: "auto",
   className: "",
   lazyLoading: true,
-  showLoader:true
-
+  showLoader: true,
 };
 
 export default memo(ResponsiveImage);

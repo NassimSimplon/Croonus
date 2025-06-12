@@ -168,6 +168,12 @@
 }
 
 @media (min-width: 280px) and (max-width: 480px) {
+  .footer-parent-container {
+    padding-top: 102px;
+  }
+  .app-footer {
+    margin-top: 0;
+  }
   .app-footer_contact,
   .app-footer_social {
     padding-inline: 0;

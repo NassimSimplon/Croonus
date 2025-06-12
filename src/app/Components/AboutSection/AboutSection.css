@@ -116,13 +116,14 @@
       minmax(177px, auto)
       204px
       1fr
-         minmax(177px, auto);
+      minmax(177px, auto);
     box-sizing: content-box;
-    gap: 25px 25px;
-    margin-top: 28px;
+    gap: 30px;
+    margin-top: 33px;
   }
   .about-section {
-    margin-top: 170px;
+    margin-top: 167px;
+    padding-top: 97px;
   }
   .about-section__title,
   .about-section__description,

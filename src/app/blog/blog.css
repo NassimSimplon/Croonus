@@ -41,8 +41,8 @@
   z-index: 2;
   padding: 100px 0 20px 0;
 }
-.blog_title_section  .about-section__title {
-  padding-inline:30px
+.blog_title_section .about-section__title {
+  padding-inline: 30px;
 }
 .blog_page_card_section {
   width: 100%;

@@ -142,7 +142,7 @@
 
   .project-section .scroll-content {
     display: flex;
-    gap: 16px;
+    gap: 18px;
   }
 
   .project-section .scroll-item,
@@ -224,18 +224,33 @@
   .project-section {
     margin-top: 89px;
   }
+  .scroll-item {
+    box-sizing: content-box;
+  }
   .project-section .scroll-item,
   .project-section .project-card__image {
-    min-width: 300px;
+    min-width: 284px;
+    height: 284px;
+    min-height: 284px;
+    max-height: 284px;
   }
+
   .project-section_title {
     font-size: 30px;
     text-align: left;
   }
   .project-section .scroll-content {
-    margin-top: 60px;
+    margin-top: 59px;
+    height: fit-content;
+
+    margin-left: 0;
+    margin-bottom: 0;
   }
   .project-section-footer {
     display: none;
+  }
+  .scroll-container {
+    scroll-snap-type: x proximity;
+    touch-action: pan-y;
   }
 }

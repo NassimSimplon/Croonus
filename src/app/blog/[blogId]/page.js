@@ -72,7 +72,7 @@ export default function BlogDetails() {
                   cursor: currentIndex === 0 ? "not-allowed" : "pointer",
                 }}
               >
-                       <ArrowIcon />
+                <ArrowIcon />
               </button>
 
               <div className="slider-window">
@@ -110,9 +110,8 @@ export default function BlogDetails() {
                       : "pointer",
                 }}
               >
-             <ArrowIcon />
+                <ArrowIcon />
               </button>
-                  
             </div>
 
             <h1 className="blog_detail_sub">1. mart 2023</h1>
@@ -121,18 +120,38 @@ export default function BlogDetails() {
 
           <div className="blogDetails_page_details_txt fade-up-element">
             <p>
-Nagradom &quot;Hot Spot eCommerce Awards 2022&quot;, u kategoriji &quot;Najbolje Web Shop Rešenje&quot;, koju je uručila eCommerce Asocijacija Srbije, kompaniji Croonus Technologies dodeljeno je značajno priznanje za njen izvanredan doprinos online prodavnicama. Ova svečana ceremonija, održana 26. januara u Beogradu, obeležena je glasovima publike i stručnog žirija koji su prepoznali Croonus Technologies kao lidera u svojoj industriji.
+              Nagradom &quot;Hot Spot eCommerce Awards 2022&quot;, u kategoriji
+              &quot;Najbolje Web Shop Rešenje&quot;, koju je uručila eCommerce
+              Asocijacija Srbije, kompaniji Croonus Technologies dodeljeno je
+              značajno priznanje za njen izvanredan doprinos online
+              prodavnicama. Ova svečana ceremonija, održana 26. januara u
+              Beogradu, obeležena je glasovima publike i stručnog žirija koji su
+              prepoznali Croonus Technologies kao lidera u svojoj industriji.
             </p>
             <p>
-           Hot Spot eCommerce Awards je istaknuti događaj u sferi elektronske trgovine u Srbiji, okupljajući najistaknutije predstavnike kompanija i različite sektore koji su ostvarili izvanredne rezultate svojim angažmanom i posvećenošću. Ovogodišnje priznanje, dodeljeno Croonus Technologies, izražava napore i kvalitet njenog rada u sektoru elektronske trgovine.
-
- </p>
+              Hot Spot eCommerce Awards je istaknuti događaj u sferi elektronske
+              trgovine u Srbiji, okupljajući najistaknutije predstavnike
+              kompanija i različite sektore koji su ostvarili izvanredne
+              rezultate svojim angažmanom i posvećenošću. Ovogodišnje priznanje,
+              dodeljeno Croonus Technologies, izražava napore i kvalitet njenog
+              rada u sektoru elektronske trgovine.
+            </p>
             <p>
-      U fokusu ovogodišnje ceremonije je naglašen cilj promoviranja efikasne i sigurne dostave, kao i bezbednih internet transakcija, čime se podstiče razvoj online kupovine i digitalizacije društva. Ova nagrada predstavlja podsticaj svim kompanijama koje su usmerene ka online poslovanju, a koncept ceremonije je dizajniran da istakne koliki je uticaj učesnika na razvoj online kupovine u Srbiji tokom prethodne godine.   </p>
+              U fokusu ovogodišnje ceremonije je naglašen cilj promoviranja
+              efikasne i sigurne dostave, kao i bezbednih internet transakcija,
+              čime se podstiče razvoj online kupovine i digitalizacije društva.
+              Ova nagrada predstavlja podsticaj svim kompanijama koje su
+              usmerene ka online poslovanju, a koncept ceremonije je dizajniran
+              da istakne koliki je uticaj učesnika na razvoj online kupovine u
+              Srbiji tokom prethodne godine.{" "}
+            </p>
             <p>
-         Podsećamo da je kompanija Croonus Technologies prisutna na tržištu već 8 godina, kontinuirano pružajući visokokvalitetne proizvode i usluge. U poslednje 3 godine, posatli su prepoznatljivi kao jedan od najuspešnijih implementatora online prodavnica, što je dodatno potvrđeno ovom prestižnom nagradom.
-
-   </p>
+              Podsećamo da je kompanija Croonus Technologies prisutna na tržištu
+              već 8 godina, kontinuirano pružajući visokokvalitetne proizvode i
+              usluge. U poslednje 3 godine, posatli su prepoznatljivi kao jedan
+              od najuspešnijih implementatora online prodavnica, što je dodatno
+              potvrđeno ovom prestižnom nagradom.
+            </p>
           </div>
         </div>
       </div>

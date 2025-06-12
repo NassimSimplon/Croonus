@@ -5,11 +5,25 @@ import PropTypes from "prop-types";
 import React, { memo } from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 
-const ProjectCard = ({ id, src, alt, title, link, type, isInView, setRef ,fade = true}) => {
+const ProjectCard = ({
+  id,
+  src,
+  alt,
+  title,
+  link,
+  type,
+  isInView,
+  setRef,
+  fade = true,
+}) => {
   return (
     <div
       className={`scroll-item ${
-       ( isInView(`scroll-item_${id}`) && fade)? "fade-up-element" : fade ? "hidden-element" : ''
+        isInView(`scroll-item_${id}`) && fade
+          ? "fade-up-element"
+          : fade
+          ? "hidden-element"
+          : ""
       }`}
       ref={setRef(`scroll-item_${id}`)}
       data-scroll-id={`scroll-item_${id}`}
@@ -47,7 +61,7 @@ ProjectCard.propTypes = {
   type: PropTypes.string,
   isInView: PropTypes.func.isRequired,
   setRef: PropTypes.func.isRequired,
-  fade:PropTypes.bool
+  fade: PropTypes.bool,
 };
 
 export default memo(ProjectCard);

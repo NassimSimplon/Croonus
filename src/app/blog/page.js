@@ -23,17 +23,17 @@ export default function Blog() {
           </div>
         </div>
       </div>
-  <div className="blog_title_section">
+      <div className="blog_title_section">
         <h1 className="about-section__title fade-up-element">
-        Croonus Blog<span>.</span>
-      </h1>
- 
-      <div className="blog_page_card_section">
-        {blogData?.map((item) => (
-          <BlogCard key={item.id} {...item} />
-        ))}
+          Croonus Blog<span>.</span>
+        </h1>
+
+        <div className="blog_page_card_section">
+          {blogData?.map((item) => (
+            <BlogCard key={item.id} {...item} />
+          ))}
+        </div>
       </div>
-       </div>
     </section>
   );
 }
