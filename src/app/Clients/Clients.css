@@ -75,7 +75,10 @@
   }
 }
 
-@media (min-width: 220px) and (max-width: 768px){
+@media (min-width: 220px) and (max-width: 80px){
+  .clients_page_video, .clients_page_video .VideoSection{
+    top:-30px;
+  }
   .clients_page_section {
     padding-inline:19px
   }

@@ -76,6 +76,7 @@
   .project_page_video,
   .project_page_video .VideoSection {
     max-height: 260px !important;
+ 
   }
 
   .project_page_card_section {
@@ -94,4 +95,9 @@
  .project_page_card_section {
   padding-inline: 19px;
 }
+  .project_page_video,
+  .project_page_video .VideoSection {
+ 
+    top:-30px
+  }
 } 
