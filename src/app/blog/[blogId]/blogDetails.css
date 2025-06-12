@@ -165,10 +165,12 @@
   -moz-transform: translateY(-50%) rotate(180deg) !important;
   -ms-transform: translateY(-50%) rotate(180deg) !important;
   -o-transform: translateY(-50%) rotate(180deg) !important;
+  margin: 0 !important;
 }
 
-.nav-button:first-of-type {
-  left: 15px;
+.nav-button:first-of-type{
+  left: 15px !important;
+ 
 }
 
 .nav-button:last-of-type {

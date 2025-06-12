@@ -64,7 +64,7 @@ export default function BlogDetails() {
 
             <div className="blog-slider-container   ">
               <button
-                className="nav-button scroll-button left-arrow"
+                className="nav-button scroll-button left-arrow "
                 onClick={prevImage}
                 disabled={currentIndex === 0}
                 style={{
@@ -99,7 +99,7 @@ export default function BlogDetails() {
               </div>
 
               <button
-                className="nav-button scroll-button "
+                className="nav-button scroll-button  "
                 onClick={nextImage}
                 disabled={currentIndex === images.length - 1}
                 style={{
