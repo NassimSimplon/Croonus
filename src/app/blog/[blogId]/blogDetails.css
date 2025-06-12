@@ -168,7 +168,7 @@
 }
 
 .nav-button:first-of-type {
-  left: -17px;
+  left: 15px;
 }
 
 .nav-button:last-of-type {
@@ -201,14 +201,7 @@
   }
 }
 
-@media (min-width: 220px) and (max-width: 480px) {
-  .blogDetails_title_section {
-    padding-top: 0;
-  }
-  .blogDetails-title {
-    font-size: 30px;
-  }
-}
+
 
 @media (min-width: 220px) and (max-width: 768px) {
   .blogDetails_page_video,
@@ -221,5 +214,17 @@
     max-width: 100%;
     grid-template-columns: 1fr;
     gap: 15px;
+  }
+}
+
+@media (min-width: 220px) and (max-width: 480px) {
+    .blogDetails_page_card_section{
+      padding-inline: 19px ;
+    }
+  .blogDetails_title_section {
+    padding-top: 0;
+  }
+  .blogDetails-title {
+    font-size: 30px;
   }
 }

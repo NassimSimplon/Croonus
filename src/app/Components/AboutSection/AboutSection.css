@@ -124,6 +124,7 @@
   .about-section {
     margin-top: 167px;
     padding-top: 97px;
+    padding-inline: 19px;
   }
   .about-section__title,
   .about-section__description,

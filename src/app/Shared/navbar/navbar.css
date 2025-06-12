@@ -261,7 +261,7 @@ width: 0;
 
 @media (min-width: 200px) and (max-width: 480px) {
   .navbar {
-    padding: 57px 20px 0 20px;
+    padding: 57px 19px 0 19px;
   }
 
   .logo {

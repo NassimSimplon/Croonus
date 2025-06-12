@@ -74,3 +74,9 @@
     max-height: 260px !important;
   }
 }
+
+@media (min-width: 220px) and (max-width: 768px){
+  .clients_page_section {
+    padding-inline:19px
+  }
+}

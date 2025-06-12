@@ -216,6 +216,7 @@
 @media (min-width: 280px) and (max-width: 480px) {
   .testimonialSection {
     margin-top: 100px;
+    padding-inline: 19px;
   }
   .testimonial-card {
     border: 1px solid rgba(255, 255, 255, 0.3);

@@ -173,6 +173,7 @@
   }
   .app-footer {
     margin-top: 0;
+    padding-inline: 19px;
   }
   .app-footer_contact,
   .app-footer_social {

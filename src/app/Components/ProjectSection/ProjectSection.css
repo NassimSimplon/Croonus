@@ -223,6 +223,7 @@
 @media (min-width: 280px) and (max-width: 480px) {
   .project-section {
     margin-top: 89px;
+    padding-left: 19px;
   }
   .scroll-item {
     box-sizing: content-box;

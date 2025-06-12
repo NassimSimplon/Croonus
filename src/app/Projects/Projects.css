@@ -87,3 +87,11 @@
     padding-inline: 30px;
   }
 }
+@media (min-width: 220px) and (max-width: 768px){
+    .project_title_section .about-section__title {
+    padding-inline: 19px;
+  }
+ .project_page_card_section {
+  padding-inline: 19px;
+}
+} 

@@ -87,3 +87,8 @@
     grid-template-columns: 1fr;
   }
 }
+@media (min-width: 220px) and (max-width: 768px) {
+    .blog_page_card_section ,.blog_title_section .about-section__title {
+padding-inline: 19px;
+  }
+}
