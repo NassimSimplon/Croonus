@@ -3,6 +3,7 @@ import Link from "next/link";
 import React, { useEffect, useState } from "react";
 import ResponsiveImage from "@/app/MediaReaders/ResponsiveImage";
 import useMultiScrollReveal from "@/app/CustomHooks/useMultiScrollTrigger";
+import { usePathname } from "next/navigation";
 
 const clientsList = [
   { id: 1, src: "/images/1.png", type: "png", alt: "Croonus client 1" },
@@ -34,11 +35,11 @@ const clientsList = [
 const ClientSection = () => {
   const { setRef, isInView } = useMultiScrollReveal(0.9);
   const [displayedClients, setDisplayedClients] = useState(clientsList);
-
+  const pathname = usePathname();
   useEffect(() => {
     const handleResize = () => {
       setDisplayedClients(
-        window.innerWidth <= 480 ? [...clientsList].slice(0, 9) : clientsList
+       ( window.innerWidth <= 480 && pathname === '/') ? [...clientsList].slice(0, 9) : clientsList
       );
     };
 

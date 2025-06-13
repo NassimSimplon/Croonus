@@ -42,8 +42,8 @@ const ProjectCard = ({
         <Link
           href={link}
           target="_blank"
-          className="project-card-link"
           rel="noopener noreferrer"
+          className="project-card-link"
         >
           <LinkIcon className="link-project-card_icon" />
         </Link>

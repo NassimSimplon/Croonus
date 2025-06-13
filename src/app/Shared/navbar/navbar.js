@@ -3,6 +3,7 @@ import "./navbar.css";
 import * as React from "react";
 import CloseIcon from "@/app/Icons/Close";
 import Hamburger from "../../Icons/Hamburger";
+import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../Icons/Logo";
 import useIsOpenElement from "@/app/CustomHooks/useIsOpenElement";
@@ -71,7 +72,9 @@ const Navbar = () => {
         <button className="close-btn" type="button" onClick={closeElement}>
           <CloseIcon className="logo" />
         </button>
-        <div className="bg-image-section"></div>
+        <div className="bg-image-section">
+          <Image className="responsive_image_banner" src="/images/responsiveImageBanner.png" alt="responsive image banner" width={331} height={218} />
+        </div>
         <div className="nav-list">
              <ul>
             {[

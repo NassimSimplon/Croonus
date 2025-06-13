@@ -34,7 +34,9 @@
   border-right: solid 1px var(--primary-white);
   padding-inline: 40px;
 }
-
+.app-footer_social  a {
+  color:var(--primary-white)
+}
 .app-footer_email,
 .app-footer_location,
 .app-footer_meta,
@@ -160,11 +162,12 @@
   }
 
   .app-footer_contact,
-  .app-footer_social {
+  .app-footer_social  {
     width: 100%;
     border-right: solid 1px var(--primary-white);
     padding-inline: 20px;
   }
+
 }
 
 @media (min-width: 280px) and (max-width: 480px) {
@@ -250,5 +253,12 @@
     justify-content: center;
     align-items: center;
     text-align: center;
+  }
+  .footer-logo{
+         width: 262.344px !important;
+        height: 173px !important;
+        top: 38px;
+        right: -70px;
+
   }
 }

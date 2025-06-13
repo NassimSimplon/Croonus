@@ -78,7 +78,10 @@
   margin-top: 10px;
   text-decoration: underline;
 }
-
+.clients_page_section .client-last-card {
+          grid-row: 13 / 14;
+                  grid-column: 1 / 3;
+}
 /* media Query */
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -129,7 +132,7 @@
   .client-last-card {
     padding: 16px 11px;
     height: 94px;
-    border-width: 2px;
+ 
   }
   .client-section-title {
     font-size: 30px;

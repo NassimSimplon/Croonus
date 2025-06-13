@@ -144,8 +144,17 @@ function Footer() {
               </h4>
             </div>
             <div className="app-footer_social">
-              <h4 className="app-footer_meta">Instagram, Linkedin</h4>
-              <h4 className="app-footer_other">Youtube, Facebook, Tik Tok</h4>
+              <h4 className="app-footer_meta"><Link href={'https://www.instagram.com/lifeatcroonus/'}
+                   target="_blank"
+          rel="noopener noreferrer"> Instagram</Link>, <Link href={'https://www.linkedin.com/company/croonus-technologies/'}
+               target="_blank"
+          rel="noopener noreferrer"> Linkedin</Link></h4>
+              <h4 className="app-footer_other"><Link href={'https://www.youtube.com/channel/UCTCxl3sqxPqafMhOsKVVEMQ/videos?view_as=subscriber'}      target="_blank"
+          rel="noopener noreferrer">Youtube</Link>, <Link href={'https://www.facebook.com/Croonus/'}      target="_blank"
+          rel="noopener noreferrer"> Facebook</Link>,
+                
+                <Link href={'https://www.tiktok.com/@lifeatcroonus'}      target="_blank"
+          rel="noopener noreferrer"> Tik Tok </Link></h4>
             </div>
           </div>
           <div className="app_footer_services">
