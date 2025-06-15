@@ -161,7 +161,7 @@ function Footer() {
             <p className="app_footer_services_txt">
               <span>Podrška</span>,
               <Link
-                href="https://www.croonus.com/uslovi-koriscenja"
+                href="/Uslovi"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -169,7 +169,7 @@ function Footer() {
               </Link>
               ,
               <Link
-                href="https://www.croonus.com/politika-bezbednosti-informacija"
+                href="/Politika"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -177,7 +177,7 @@ function Footer() {
               </Link>
               ,
               <Link
-                href="https://www.croonus.com/politika-kvaliteta"
+                href="/Kvaliteta"
                 target="_blank"
                 rel="noopener noreferrer"
               >

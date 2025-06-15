@@ -1,0 +1,105 @@
+.uslovi-page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: var(--primary-bg);
+}
+
+.uslovi_page_video {
+  width: 100%;
+  height: 100vh;
+  max-height: 370px;
+  min-height: 178.812px;
+  position: relative;
+
+  z-index: 0;
+}
+
+.uslovi_page_video video {
+  width: 100%;
+}
+.uslovi_page_video::after {
+  content: "";
+  width: 130% !important;
+  height: 170px;
+  position: absolute;
+  bottom: -90px;
+  left: -30px;
+  background-color: var(--primary-bg);
+  z-index: 1;
+  transform: rotate(-5deg);
+  -webkit-transform: rotate(-5deg);
+  -moz-transform: rotate(-5deg);
+  -ms-transform: rotate(-5deg);
+  -o-transform: rotate(-5deg);
+}
+.uslovi_title_section {
+  width: 100%;
+  height: 100%;
+  background-color: var(--primary-bg);
+  position: relative;
+  z-index: 2;
+  padding: 100px 0 20px 0;
+}
+
+.uslovi_text_section {
+ padding-inline: 200px;
+ margin-top: 7rem;
+}
+.uslovi_paragraph {
+  font-size: var(--sub-title-size);
+  color: var(--primary-white);
+ 
+  font-weight: 300;
+}
+.uslovi_text_section_title{
+  font-size: var(--sub-title-size);
+    color: var(--primary-white);
+    font-weight: 900;
+    margin-top:50px;
+}
+.uslovi_date{
+        font-weight: 700;
+}
+.uslovi_text_section_title span {
+  color: var(--primary-green);
+    
+}
+
+@media (min-width: 1440px) {
+  .uslovi_page_video::after {
+    height: 250px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .uslovi_page_video,
+  .uslovi_page_video .VideoSection {
+    max-height: 300px !important;
+  }
+.uslovi_text_section {
+ padding-inline:30px;
+ 
+}
+}
+
+@media (min-width: 220px) and (max-width: 768px) {
+  .uslovi_page_video,
+  .uslovi_page_video .VideoSection {
+    max-height: 260px !important;
+  }
+
+  .uslovi_title_section .about-section__title {
+    padding-inline: 30px;
+  }
+  .uslovi_text_section {
+ padding-inline:30px;
+ 
+}
+}
+@media (min-width: 220px) and (max-width:480px) {
+  .uslovi_title_section .about-section__title, .uslovi_text_section {
+    padding-inline: 19px;
+  }
+ 
+}
