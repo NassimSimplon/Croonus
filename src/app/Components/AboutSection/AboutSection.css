@@ -68,8 +68,14 @@
   margin: 50px auto;
   gap: 20px;
 }
+@media (min-width: 1200px) and (max-width: 1500px){
+    .about-cards-container {
+    height: fit-content;
+    grid-template-rows: repeat(3, 204px);
+  }
+}
 
-@media (min-width: 1024px) and (max-width: 1320px) {
+@media (min-width: 1024px) and (max-width: 1200px) {
   .about-cards-container {
     height: fit-content;
     grid-template-rows: repeat(14, 79px);

@@ -8,7 +8,7 @@ const AboutSection = () => {
   const [cardsData, setCardsData] = useState([]);
 
   useEffect(() => {
-    const isMobile = typeof window !== "undefined" && window.innerWidth <= 480;
+    const isMobile = typeof window !== "undefined" && (window.innerWidth <= 480 || (window.innerWidth >= 1200 && window.innerWidth <= 1500));
 
     const tempCards = [
       {

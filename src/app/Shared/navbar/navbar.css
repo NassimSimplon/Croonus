@@ -232,7 +232,12 @@
   margin-top: 30px;
 }
 
+
 /* Media Query */
+@media (min-width: 1200px) and (max-width: 1500px) {
+  .navbar {
+    padding-inline: 30px;
+  }}
 @media (min-width: 481px) and (max-width: 1200px) {
   .navbar {
     padding: 20px 20px 0px 20px;
@@ -287,21 +292,21 @@
   .fullscreen-navbar {
     display: grid;
     padding-inline: 29px !important;
-margin-block: 0;
+    margin-block: 0;
     grid-template-columns: 1fr;
     place-items: flex-start;
-            gap: 32px;
-        grid-template-rows: auto;
+    gap: 32px;
+    grid-template-rows: auto;
   }
   .fullscreen-navbar .close-btn {
     top: 81px;
     right: 30px;
-width: 46px;
-height: 46px;
+    width: 46px;
+    height: 46px;
   }
-  .fullscreen-navbar .close-btn  svg{
+  .fullscreen-navbar .close-btn svg {
     width: 23px;
-height: 23px;
+    height: 23px;
   }
 
   .bg-image-section {
@@ -338,31 +343,29 @@ height: 23px;
     padding-bottom: 20px;
     box-sizing: border-box;
     height: fit-content;
-   
+
     grid-row: 1/2;
     padding-top: 76px;
   }
 
-    .fullscreen-navbar ul li{
- margin: 0;
-
+  .fullscreen-navbar ul li {
+    margin: 0;
   }
   .fullscreen-navbar ul li a {
     font-size: var(--responsive-title-size);
     margin: 0;
-        font-weight: 300;
-line-height: 45px;
+    font-weight: 300;
+    line-height: 45px;
   }
 
-  .nav-footer{
+  .nav-footer {
     margin-top: 32px;
-    padding-top:32px
+    padding-top: 32px;
   }
   .nav-footer h4 {
-font-size: 18px;
-font-style: normal;
-font-weight: 300;
-line-height: normal;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: normal;
   }
-
 }
