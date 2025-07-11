@@ -9,10 +9,6 @@
 
 ![Furniture Image](public/home.png)
 
-##The LightHouse Test Results for Blog Page:
-
-![Furniture Image](public/blog.png)
-
 ## Folder Structure
 ```
    └── 📁public
